@@ -18,14 +18,14 @@ header {
     background-color: #0F1020;
 }
 
-header .links a {
+header div a {
     margin: 0 30px;
     text-decoration: none;
 
     color: #fff;
 }
 
-header .links a:hover {
+header div a:hover {
     color: #D33F49;
     transition: color 200ms;
     font-weight: bold;
