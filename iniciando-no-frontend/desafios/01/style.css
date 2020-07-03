@@ -1,0 +1,33 @@
+/*GLOBAL*/
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*HEADER*/
+header {
+    padding: 30px;
+    text-align: center;
+
+    background-color: #0F1020;
+}
+
+header div a {
+    margin: 0 30px;
+    text-decoration: none;
+
+    color: #fff;
+}
+
+header div a:hover {
+    color: #D33F49;
+    transition: color 200ms;
+    font-weight: bold;
+}
+
