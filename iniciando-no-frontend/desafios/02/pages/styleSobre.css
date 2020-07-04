@@ -1,0 +1,125 @@
+@import "https://fonts.googleapis.com/css2?family=Roboto&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap";
+
+:root {
+    --backgroundColor: #E8EDDF;
+    --greenColor: #50fa7b;
+    --headerColor: #0F1020;
+}
+
+/*GLOBAL*/
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--backgroundColor);
+    font-family: 'Roboto', sans-serif;
+}
+
+/*HEADER*/
+header {
+    padding: 30px;
+    text-align: center;
+
+    background-color: #0F1020;
+}
+
+.links a {
+    margin: 0 30px;
+    text-decoration: none;
+
+    color: var(--backgroundColor);
+}
+
+.links a:hover {
+    color: var(--greenColor);
+    transition: color 200ms;
+    font-weight: bold;
+    border-bottom: solid 1px var(--greenColor);
+}
+
+/*CONTAINER*/
+.container {
+    text-align: center;
+    padding: 32px;
+}
+
+.container img {
+    height: 250px;
+    margin-bottom: 32px;
+
+    border-radius: 50%;
+    border: solid 5px var(--headerColor);
+}
+
+.container img:hover {
+    border: solid 5px var(--greenColor);
+    transition: color 200ms;
+}
+
+.container h1 {
+    font-size: 42px;
+    font-weight: bold;
+    line-height: 42px;
+    color: var(--headerColor);
+}
+
+.container h1 a {
+    color: var(--headerColor);
+    text-decoration: none;
+}
+
+.container h1 a:hover {
+    border-bottom: solid 3px var(--headerColor);
+    color: var(--greenColor);
+    transition: color 200ms;
+}
+
+.container h2 {
+    max-width: 550px;
+    margin: 24px auto;
+
+    font-size: 24px;
+    
+    opacity: 0.8;
+}
+
+/*CONTAINER-CONTENT*/
+.content h1 {
+    color: var(--headerColor);
+    font-size: 32px;
+}
+
+.content ul {
+    padding: 10px 32px 0px 32px;
+}
+
+.content ul li {
+    max-width: 150px;
+    margin: 0 auto;
+    text-align: center;
+
+    font-size: 24px;
+    line-height: 34px;
+
+    opacity: 0.8;
+}
+
+.content ul li:hover {
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--headerColor);
+    transition: color 200ms;
+}
+
+/*FOOTER*/
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: var(--headerColor);
+}
+
+
