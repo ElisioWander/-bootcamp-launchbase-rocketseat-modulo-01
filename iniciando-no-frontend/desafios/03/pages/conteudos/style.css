@@ -1,0 +1,198 @@
+@import "https://fonts.googleapis.com/css2?family=Roboto&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap";
+
+:root {
+    --backgroundColor: #E8EDDF;
+    --greenColor: #50fa7b;
+    --headerColor: #0F1020;
+    --rocketseatColor: #7159c1;
+    --orangeColor: #fd951f;
+}
+
+/*GLOBAL*/
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: var(--backgroundColor);
+    font-family: 'Roboto', sans-serif;
+}
+
+/*HEADER*/
+header {
+    padding: 30px;
+    text-align: center;
+
+    background-color: var(--headerColor);
+}
+
+header div a {
+    margin: 0 30px;
+    text-decoration: none;
+
+    color: var(--backgroundColor);
+}
+
+header div a:hover {
+    color: var(--greenColor);
+    border-bottom: solid 1px var(--greenColor);
+    transition: color 200ms;
+    font-weight: bold;
+}
+
+/*CONTAINER*/
+.container {
+    width: 100%;
+    background-color: #000;
+}
+
+/*COURSES*/
+.cards {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 35px;
+    padding: 50px;
+    height: 700px;
+}
+
+/*CARD*/
+.card {
+    background-color: var(--headerColor);
+    text-align: center;
+    border-radius: 10px;
+    padding-top: 200px;
+    font-size: 20px;
+
+    position: relative;
+}
+.card .number {
+    width: 100%;
+
+    position: absolute;
+    top: 20px;
+}
+
+.card .number p {
+    width: 30px;
+    padding: 13px;
+    border-radius: 50%;
+}
+
+/*UM CIRCULO CONTENDO UM NÚMERO EM CADA CARD*/
+.card .number .one {
+    border: solid 2px var(--rocketseatColor);
+}
+
+.card .number .two {
+    border: solid 2px var(--orangeColor);
+}
+
+.card .number .three {
+    border: solid 2px var(--greenColor);
+}
+
+/*COURSE*/
+.card img {
+    height: 175px;
+    margin-top: 40px;
+}
+
+.card p {
+    max-width: 300px;
+    margin: 50px auto;
+    line-height: 30px;
+
+    color: var(--backgroundColor);
+    opacity: 0.8;
+}
+
+.card:hover {
+    cursor: pointer;
+
+    margin: -10px 0 10px;
+    
+}
+
+/*BORDAS DAS CAIXAS DE CADA CURSO*/
+#starter:hover {
+    border: solid 2px var(--rocketseatColor);
+    transition: 200ms;
+
+}
+#launchbase:hover {
+    border: solid 2px var(--orangeColor);
+    transition: 200ms;
+}
+
+#gostack:hover {
+    border: solid 2px var(--greenColor);
+    transition: 200ms;
+}
+
+/*CORES DO INICIO DAS FRASES DE CADA CURSO*/
+.card span.purple {
+    color: var(--rocketseatColor);
+    font-weight: bold;
+    opacity: none;
+}
+
+.card span.orange {
+    color: var(--orangeColor);
+    font-weight: bold;
+}
+
+.card span.green {
+    color: var(--greenColor);
+    font-weight: bold;
+}
+
+/*MODAL-OVERLAY*/
+.modal-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+
+    position: fixed;
+    top: 0;
+
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal {
+    background-color: white;
+    width: 90%;
+    height: 90%;
+    margin: 5vh auto;
+
+    position: relative;
+}
+
+.close-modal i {
+    position: absolute;
+    right: 0;
+    margin: 3px 3px 0 0;
+}
+.close-modal i:hover {
+    cursor: pointer;
+}
+
+/*MODAL-OVERLAY ACTIVE*/
+.modal-overlay.active {
+    opacity: 1;
+    visibility: initial;
+}
+
+/*IFRAME*/
+iframe {
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    top: 5%;
+}
