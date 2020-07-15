@@ -47,12 +47,13 @@ header div a:hover {
 /*CONTAINER*/
 .container {
     width: 100%;
+    padding-bottom: 40px;
     background-color: #000;
 }
 
 /*COURSES*/
 .cards {
-    max-width: 1300px;
+    max-width: 1500px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -63,7 +64,7 @@ header div a:hover {
 
 /*CARD*/
 .card {
-    background-color: var(--headerColor);
+    background-color: rgba(31, 28, 28, 0.390);
     text-align: center;
     border-radius: 10px;
     padding-top: 200px;
@@ -152,6 +153,42 @@ header div a:hover {
     font-weight: bold;
 }
 
+.card .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+    font-size: 15px;
+}
+
+.card .content i {
+    background-color: var(--rocketseatColor);
+    border-radius: 50%;
+    position: absolute;
+    right: 80px;
+}
+
+/*SOBRESCREVENDO AS CONFIGURAÇÕES QUE FORAM APLICADAS NO ÍCONE DOS CARDS: LAUNCHBASE E GOSTACK*/
+#launchbase .content i,
+#gostack .content i {
+    margin-right: 8px;
+}
+
+.card .content p {
+    position: relative;
+
+    font-weight: bold;
+}
+
+.card .content p.free {
+    background-color: rgba(31, 28, 28, 0.390);
+    width: 90%;
+
+    border-radius: 25px;
+    filter: brightness(90%);
+    color: #fff;
+    font-weight: bold;
+}
+
 /*MODAL-OVERLAY*/
 .modal-overlay {
     width: 100%;
@@ -181,6 +218,16 @@ header div a:hover {
 }
 .close-modal i:hover {
     cursor: pointer;
+}
+
+.maxmize-modal i {
+    position: absolute;
+    right: 0;
+    margin: 10px 40px 0 0;
+}
+
+.maxmize-modal i:hover {
+    cursor: pointer;    
 }
 
 /*MODAL-OVERLAY ACTIVE*/
