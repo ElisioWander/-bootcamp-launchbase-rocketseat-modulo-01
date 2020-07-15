@@ -1,31 +1,40 @@
- Sobre o desafio
+<h1 align="center">
+<br>
+  <img src="assets/launchbase.srv" alt="YOUR_PROJECT_NAME" width="120">
+<br>
+<br>
+YOUR_PROJECT_NAME
+</h1>
 
-A partir do arquivo do desafio 2.2, adicionar no header um link chamado Conteúdos. Essa página deve conter um grid onde devem ser mostrados os 3 principais cursos da Rocketseat: Starter, Launchbase e GoStack. Ao clicar em um dos cursos, deve ser aberta uma modal onde um iframe irá carregar as informações do curso selecionado.
-Informações da página
+<p align="center">A little description about your project</p>
 
-    Título da página
-    Grid com 3 colunas e 1 linha onde serão apresentados os cards dos cursos
+<p align="center">
+  <a href="https://opensource.org/licenses/MIT">
+    <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License MIT">
+  </a>
+</p>
 
-Informações do card
+[//]: # (Add your gifs/images here:)
+<div>
+  <img src="IMAGE_1_URL" alt="demo" height="425">
+  <img src="IMAGE_2_URL" alt="demo" height="425">
+</div>
 
-    Logo do curso (Starter, Launchbase e GoStack)
-    Título do curso
-    Quantidade de módulos dos cursos
-    Informação se o curso é gratuito ou pago
+<hr />
 
-Modal
+## Features
+[//]: # (Add the features of your project here:)
+This app features all the latest tools and practices in mobile development!
 
-O modal deve conter um iframe que busca a página do curso (dica: basta adicionar starter, launchbase ou gostack ao final de https://rocketseat.com.br/). Além do botão de fechar o modal, é preciso implementar a funcionalidade de maximizar o modal (dica: utilize a mesma lógica implementada para fechar o modalOverlay, mas trabalhe com a classe modal e utilize o método contains do classList para verificar se o elemento está ou não com a classe maximize).
-Estilização
+- ⚛️ **React Js** — A JavaScript library for building user interfaces
+- ⚛️ **React Native** — A lib that provides a way to create native apps for Android and iOS
+- 💹 **Node Js** — A web framework for Node Js
 
-Você tem liberdade para escolher a estilização que preferir para esse desafio, mas alguns pontos são obrigatórios:
+## Getting started
 
-    Deve ser utilizado o grid para organizar os cursos
-    O modal nunca deve abrir maximizado
+Describe here the way to use/install your project
 
-calendar Entrega
 
-Esse desafio não precisa ser entregue e não receberá correção. Após concluí-lo, adicionar esse código ao seu Github é uma boa forma de demonstrar seus conhecimentos para oportunidades futuras.
-memo Licença
+## License
 
-Esse projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
+This project is licensed under the MIT License - see the [LICENSE](https://opensource.org/licenses/MIT) page for details.

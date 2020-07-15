@@ -51,7 +51,7 @@ header div a:hover {
     background-color: #000;
 }
 
-/*COURSES*/
+/*CARDS*/
 .cards {
     max-width: 1500px;
     margin: 0 auto;
@@ -72,33 +72,33 @@ header div a:hover {
 
     position: relative;
 }
-.card .number {
+.card .card-numbers {
     width: 100%;
 
     position: absolute;
     top: 20px;
 }
 
-.card .number p {
+.card .card-numbers p {
     width: 30px;
     padding: 13px;
     border-radius: 50%;
 }
 
-/*UM CIRCULO CONTENDO UM NÚMERO EM CADA CARD*/
-.card .number .one {
+/*ESTILIZAÇÃO DE UM CIRCULO CONTENDO UM NÚMERO EM CADA CARD*/
+.card .card-numbers .card-number-one {
     border: solid 2px var(--rocketseatColor);
 }
 
-.card .number .two {
+.card .card-numbers .card-number-two {
     border: solid 2px var(--orangeColor);
 }
 
-.card .number .three {
+.card .card-numbers .card-number-three {
     border: solid 2px var(--greenColor);
 }
 
-/*COURSE*/
+/*CARD*/
 .card img {
     height: 175px;
     margin-top: 40px;
@@ -120,7 +120,7 @@ header div a:hover {
     
 }
 
-/*BORDAS DAS CAIXAS DE CADA CURSO*/
+/*BORDAS DAS CAIXAS DE CADA CARD*/
 #starter:hover {
     border: solid 2px var(--rocketseatColor);
     transition: 200ms;
@@ -136,7 +136,7 @@ header div a:hover {
     transition: 200ms;
 }
 
-/*CORES DO INICIO DAS FRASES DE CADA CURSO*/
+/*CORES DO INICIO DAS FRASES DE CADA CARD*/
 .card span.purple {
     color: var(--rocketseatColor);
     font-weight: bold;
@@ -167,19 +167,20 @@ header div a:hover {
     right: 80px;
 }
 
-/*SOBRESCREVENDO AS CONFIGURAÇÕES QUE FORAM APLICADAS NO ÍCONE DOS CARDS: LAUNCHBASE E GOSTACK*/
+/*SOBRESCREVENDO A ESTILIZAÇÃO QUE FOI APLICADAS NO ÍCONE DOS CARDS: LAUNCHBASE E GOSTACK*/
 #launchbase .content i,
 #gostack .content i {
     margin-right: 8px;
 }
 
+/*CONTENT*/
 .card .content p {
     position: relative;
 
     font-weight: bold;
 }
 
-.card .content p.free {
+.card .content p.card-price {
     background-color: rgba(31, 28, 28, 0.390);
     width: 90%;
 
@@ -220,14 +221,23 @@ header div a:hover {
     cursor: pointer;
 }
 
-.maxmize-modal i {
+.maximize-modal i {
     position: absolute;
     right: 0;
     margin: 10px 40px 0 0;
 }
 
-.maxmize-modal i:hover {
+.maximize-modal i:hover {
     cursor: pointer;    
+}
+
+/*MAXMIZE MODAL ACTIVE*/
+.modal.maximize {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    margin: 0vh auto;
 }
 
 /*MODAL-OVERLAY ACTIVE*/
