@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block styles %}
+    <link rel="stylesheet" href="/styles/about.css">
+{% endblock styles %}
+
+{% block title %}
+    <title>Conteúdos | Rocketseat</title>
+{% endblock title %}
+
+{% block page_header %}
+{% include "partials/page-header.html" %}
+{% endblock page_header %}
+
+{% block content %}
+    <div class="container">
+        <img src="/assets/rocket.jpg" alt="Rocketseat">
+
+        <h1>
+            <a href="https://rocketseat.com.br" target="_blank">Rocketseat</a>
+        </h1>
+        <h2>"Mais do que uma plataforma de educação em tecnologia, somos uma comunidade incrível de programadores em busca do próximo nível 🚀"</h2>
+
+        <div class="content">
+            <h1>Principais tecnologias</h1>
+
+            <ul>
+                <li><a href="https://www.javascript.com/" target="_blank">JavaScript</a></li>
+                <li><a href="https://nodejs.org/en/" target="_blank">Node.js</a></li>
+                <li><a href="https://pt-br.reactjs.org/" target="_blank">React.js</a></li>
+                <li><a href="https://reactnative.dev/" target="_blank">React Native</a></li>
+            </ul>
+        </div>
+
+    </div>
+{% endblock content %}
+
+{% block footer %}
+    <footer>
+        <div id="links-footer" class="links">
+            <a href="https://github.com/rocketseat" target="_blank">Github</a>
+            <a href="https://www.instagram.com/rocketseat_oficial/?hl=pt-br" target="_blank">Instagram</a>
+            <a href="https://pt-br.facebook.com/rocketseat/" target="_blank">Facebook</a>
+        </div>
+    </footer>
+{% endblock footer %}
