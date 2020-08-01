@@ -21,7 +21,7 @@ server.get("/", (req, res) => {
 server.get("/about", (req, res) => {
     const data = {
         image: "/assets/rocket.jpg",
-        name: '<a href="https://rocketseat.com.br" target="_blank">Rocketseat</a>',
+        name: 'Rocketseat',
         description: ' "Mais do que uma plataforma de educação em tecnologia, somos uma comunidade incrível de programadores em busca do próximo nível" ',
         title: "Principais tecnologias",
         technology: [
