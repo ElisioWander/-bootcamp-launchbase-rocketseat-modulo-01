@@ -19,62 +19,29 @@
     <div class="container">
 
         <div class="cards">
-            <div id="starter" class="card">
+            
+            
+            {% for item in items %}
+            <div class="card" id="{{ item.id }}">
                 <div class="card-numbers">
-                    <p class="card-number-one">01</p>
+                    <p {{ item.numberClass }}>{{ item.number }}</p>
                 </div>
 
-                <img src="https://storage.googleapis.com/golden-wind/bootcamp-launchbase/assets/starter.svg" alt="Starter Imagem">
+                <img src="{{ item.image }}" alt="Imagen de {{ item.id }}">
 
-                <p>
-                    <span class="purple">Torne-se um programador desejado</span>
-                    no mercado com esses cursos gratuitos</p>
+                <p>{{ item.description }}</p>
 
                 <div class="content">
-                    <p>
-                        <i class="material-icons">play_arrow</i>5 Módulos</p>
+                    <p><i class="material-icons">play_arrow</i>{{ item.modules }}</p>
 
-                    <p class="card-price">Free</p>
+                    <p class="card-price">{{ item.price }}</p>
                 </div>
             </div>
+            {% endfor %}
+            
 
-            <div id="launchbase" class="card">
-                <div class="card-numbers">
-                    <p class="card-number-two">02</p>
-                </div>
+            
 
-                <img src="https://storage.googleapis.com/golden-wind/bootcamp-launchbase/assets/launchbase.svg" alt="LauchBase Imagem">
-
-                <p>
-                    <span class="orange">Domine programação do zero</span>
-                    e tenha acesso as melhores oportunidades do mercado</p>
-
-                <div class="content">
-                    <p>
-                        <i class="material-icons">play_arrow</i>16 Módulos</p>
-
-                    <p class="card-price">Pago</p>
-                </div>
-            </div>
-
-            <div id="gostack" class="card">
-                <div class="card-numbers">
-                    <p class="card-number-three">03</p>
-                </div>
-
-                <img src="https://storage.googleapis.com/golden-wind/bootcamp-launchbase/assets/gostack.svg" alt="GoStack Imagem">
-
-                <p>
-                    <span class="green">Treinamento imercivo</span>
-                    nas tecnologias mais modernas de desenvolvimento web e mobile</p>
-
-                <div class="content">
-                    <p>
-                        <i class="material-icons">play_arrow</i>18 Módulos</p>
-
-                    <p class="card-price">Pago</p>
-                </div>
-            </div>
         </div>
 
     </div>
