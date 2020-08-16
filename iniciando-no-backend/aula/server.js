@@ -8,7 +8,8 @@ server.set("view engine", "html")
 
 nunjucks.configure("views", {
     express: server,
-    autoescape: false
+    autoescape: false,
+    noCache: true
 })
 
 server.use(express.static("public"))
