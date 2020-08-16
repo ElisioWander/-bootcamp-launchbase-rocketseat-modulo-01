@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    <title>{{ item.title }}</title>
+{% endblock title %}
+
+
+{% block content %}
+    <header>
+        <div class="links">
+            <a href="/">Sobre</a>
+            <a href="/portifolio">Aulas</a>
+        </div>
+    </header>
+
+    <div id="wrapper" class="video">
+        <h1>{{ item.title }}</h1>
+    </div>
+
+    <section class="video">
+        <div class="card">
+            <div class="card__video__container" id="{{ item.id }}">
+                <iframe src="https://www.youtube.com/embed/{{ item.id }}" frameborder="0"></iframe>
+            </div>
+
+            <div class="card__content">
+                <p>{{ item.title }}</p>
+            </div>
+            
+            <div class="card__info">
+                <p>{{ item.duration }}</p>
+                <p class="card__price">{{ item.price }}</p>
+            </div>
+        </div>
+
+    </section>
+
+{% endblock content %}
