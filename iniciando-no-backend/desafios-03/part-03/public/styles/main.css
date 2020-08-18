@@ -1,0 +1,27 @@
+@import "https://fonts.googleapis.com/css2?family=Roboto&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap";
+
+:root {
+    --backgroundColor: #E8EDDF;
+    --greenColor: #50fa7b;
+    --headerColor: #0F1020;
+    --rocketseatColor: #7159c1;
+    --orangeColor: #fd951f;
+}
+
+/*GLOBAL*/
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: var(--backgroundColor);
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}

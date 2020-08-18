@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block styles %}
+    <link rel="stylesheet" href="/styles/about.css">
+{% endblock styles %}
+
+{% block title %}
+    <title>Sobre | Rocketseat</title>
+{% endblock title %}
+
+{% block page_header %}
+{% include "partials/page-header.html" %}
+{% endblock page_header %}
+
+{% block content %}
+    <div class="container">
+        <img src="{{ data.image }}" alt="imagem de {{ data.name }}">
+
+        <h1><a href="https://rocketseat.com.br" target="_blank">{{ data.name }}</a></h1>
+
+        <h2>{{ data.description }}</h2>
+
+        <div class="content">
+            <h1>{{ data.title }}</h1>
+
+            {% for data in data.technology %}
+            <ul>
+                <li><a href="{{ data.url }}" target="_blank">{{ data.name }}</li>
+            </ul>
+            {% endfor %}
+            
+        </div>
+
+    </div>
+{% endblock content %}
+
+{% block footer %}
+    <footer>
+        <div id="links-footer" class="links">
+            {% for link in data.link %}
+            <a href="{{ link.url }}" target="_blank">{{ link.name }}</a>
+            {% endfor %}
+        </div>
+    </footer>
+{% endblock footer %}
