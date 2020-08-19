@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+
+{% block styles %}
+<link rel="stylesheet" href="/styles/course-redirected.css">
+{% endblock styles %}
+
+
+{% block title %}
+<title>Curso | {{ course.id }}</title>
+{% endblock title %}
+
+
+{% block content %}
+    <section>
+        <iframe src="https://rocketseat.com.br/{{ course.id }}" frameborder="0"></iframe>
+    </section>
+{% endblock content %}
+
+
+

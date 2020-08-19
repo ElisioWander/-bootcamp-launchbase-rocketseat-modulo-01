@@ -15,7 +15,22 @@ nunjucks.configure("views", {
 
 
 server.get("/", (req, res) => {
-    return res.render("portifolio", { items: courses })
+    return res.render("courses", { items: courses })
+})
+
+
+server.get("/courses/:id", (req, res) => {
+    const id = req.params.id
+
+    const course = courses.find(function(course) {
+        return course.id == id
+    })
+
+    if (!course) {
+        return res.status(404).render("partials/not-found")
+    }
+
+    return res.render("course-redirected", { course })
 })
 
 server.get("/about", (req, res) => {
@@ -40,9 +55,11 @@ server.get("/about", (req, res) => {
     return res.render("about", { data })
 })
 
+
 server.use(function(req, res) {
     res.status(404).render("partials/not-found");
 })
+
 
 server.listen(5000, () => {
 
