@@ -73,6 +73,6 @@ Feito com :purple_heart: by [Rocketseat](https://rocketseat.com.br) :wave: [Entr
 
 ## Resultado
 
-<h1>
+<h1 align="center">
     <img src="./public/assets/back-end.gif">
 </h1>
