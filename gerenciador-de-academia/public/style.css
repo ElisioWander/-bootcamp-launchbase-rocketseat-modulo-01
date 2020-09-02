@@ -51,16 +51,22 @@ header .links a:hover {
     color: var(--primary-color);
 }
 
-header .links a:hover::after {
+header .links a::after {
     content: "";
 
-    width: 100%;
+    width: 0;
     height: 2px;
-    
+
     bottom: -4px;
     left: 0;
 
     position: absolute;
 
     background-color: var(--primary-color);
+}
+
+header .links a:hover::after {
+    width: 100%;
+
+    transition: all 200ms;
 }
