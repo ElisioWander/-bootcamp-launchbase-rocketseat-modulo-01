@@ -24,7 +24,7 @@ a {
 }
 /*GLOBAL*/
 
-
+/*HEADER*/
 header {
     width: 100%;
     
@@ -33,7 +33,9 @@ header {
     
     background-color: #FFF;
 }
+/*HEADER*/
 
+/*HEADER LINKS*/
 header .links {
     font-size: 22px;
 }
@@ -70,3 +72,36 @@ header .links a:hover::after {
 
     transition: all 200ms;
 }
+/*HEADER LINKS*/
+
+/*CARD*/
+.card {
+    width: 800px;
+    height: 400px;
+
+    margin: 0 auto;
+    margin-top: 45px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 0px 2px 6px -2px rgba(0, 0, 0, 0.5);
+
+    background-color: #FFF;
+
+    /*animation*/
+    animation-name: up;
+    animation-duration: 700ms;
+}
+
+@keyframes up {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
