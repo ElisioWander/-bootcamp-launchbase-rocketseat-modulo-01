@@ -118,6 +118,10 @@ header .links a:hover::after {
 
     background-color: #FFF;
 }
+
+.details h3 {
+    
+}
 /*DETAILS*/
 
 /*ITEM*/
@@ -129,4 +133,21 @@ header .links a:hover::after {
 
 .item:last-child {
     border: none;
+}
+
+.item div:nth-child(1) {
+    font-size: 18px;
+    font-family: 'Roboto';
+    font-weight: bold;
+
+    color: #222;
+}
+
+.item div:nth-child(2) {
+    font-size: 16px;
+    font-family: 'Roboto';
+    font-weight: normal;
+    line-height: 32px;
+
+    color: #555;
 }
