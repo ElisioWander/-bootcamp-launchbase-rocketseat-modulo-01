@@ -24,7 +24,6 @@
   <a href="#rocket-sobre-o-desafio">Sobre o desafio</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#calendar-entrega">Entrega</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#memo-licença">Licença</a>
-  <a href="#result-challenge">Resultado</a>
 </p>
 
 ## :rocket: Sobre o desafio
@@ -69,7 +68,9 @@ Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](../LICENSE) para
 
 Feito com :purple_heart: by [Rocketseat](https://rocketseat.com.br) :wave: [Entre na nossa comunidade!](https://discordapp.com/invite/gCRAFhc)
 
-## :result: Resultado
+---
+
+## Resultado
 
 <h1 align="center">
   <img alt="gym-project" src="public/assets/gym-pj-challenge.png">
