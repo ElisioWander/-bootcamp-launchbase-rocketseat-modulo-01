@@ -1,3 +1,9 @@
+## Resultado
+
+<h1 align="center">
+  <img alt="gym-project" src="public/assets/gym-project.gif" width="300px">
+</h1>
+
 <h1 align="center">
     <img alt="Launchbase" src="https://storage.googleapis.com/golden-wind/bootcamp-launchbase/logo.png" width="400px" />
 </h1>
@@ -69,9 +75,3 @@ Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](../LICENSE) para
 Feito com :purple_heart: by [Rocketseat](https://rocketseat.com.br) :wave: [Entre na nossa comunidade!](https://discordapp.com/invite/gCRAFhc)
 
 ---
-
-## Resultado
-
-<h1 align="center">
-  <img alt="gym-project" src="public/assets/gym-pj-challenge.png">
-</h1>
