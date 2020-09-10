@@ -1,7 +1,7 @@
 ## Resultado
 
 <h1 align="center">
-  <img alt="gym-project" src="public/assets/gym-project.gif" width="300px">
+  <img alt="gym-project" src="public/assets/gym-project.gif" width="400px">
 </h1>
 
 <h1 align="center">
