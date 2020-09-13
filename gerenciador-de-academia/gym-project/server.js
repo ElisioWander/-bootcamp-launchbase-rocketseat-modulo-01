@@ -12,6 +12,8 @@ nunjucks.configure("views", {
     noCache: true
 })
 
+//habilitar o req.body
+server.use(express.urlencoded({ extended: true }))
 server.use(express.static("public"))
 server.use(routes)
 
