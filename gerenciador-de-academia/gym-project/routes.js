@@ -1,5 +1,7 @@
 const { get } = require('browser-sync')
 const express = require('express')
+const instructors = require('./instructors')
+
 const routes = express.Router()
 
 routes.get("/", (req, res) => {
@@ -14,22 +16,7 @@ routes.get("/instructors/create", (req, res) => {
     return res.render("instructors/create.html")
 })
 
-routes.get("/members", (req, res) => {
-    return res.send("members")
-})
-
-
-routes.post("/instructors", (req, res) => {
-    const keys = Object.keys(req.body)
-
-    for (let key of keys) {
-        if (req.body[key] == "") {
-            return res.send("please, fill all fields")
-        }
-    }
-
-    return res.send(req.body)
-})
+routes.post("/instructors", instructors.post)
 
 
 
