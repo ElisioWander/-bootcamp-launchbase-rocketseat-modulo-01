@@ -1,4 +1,4 @@
-## Resultado
+## RESULTADO
 
 <h1 align="center">
   <img alt="gym-project" src="public/assets/gym-project.gif" width="600px">
