@@ -1,1 +1,18 @@
-{"avatar_url":"http://google.com","name":"Elisio Wander","birth":"1997-04-02","gender":"M","services":"dsadwadsadwasadwasdawdas"}
+{
+  "instructors": [
+    {
+      "avatar_url": "http://google.com",
+      "name": "Elisio Wander",
+      "birth": "1997-04-02",
+      "gender": "M",
+      "services": "nada de mais"
+    },
+    {
+      "avatar_url": "http://google.com",
+      "name": "Matheus Aguiar",
+      "birth": "1998-06-05",
+      "gender": "M",
+      "services": "dsadwadsa"
+    }
+  ]
+}
