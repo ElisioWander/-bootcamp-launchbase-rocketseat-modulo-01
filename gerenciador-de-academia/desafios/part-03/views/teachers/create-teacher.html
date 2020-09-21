@@ -1,5 +1,10 @@
 {% extends "layout.html" %}
 
+{% block styles %}
+    <link rel="stylesheet" href="/styles/teacher.css">
+    <link rel="stylesheet" href="styles/create-teacher.css">
+{% endblock styles %}
+
 {% block title %}
     <title>Teachers</title>
 {% endblock title %}
@@ -46,25 +51,19 @@
         </div>
         <div class="item">
             <div>Tipo de aula</div>
+
             <div>
                 <label for="className01">Presencial</label>
                 <input type="radio" name="classType">
-            </div>
-            <div>
                 <label for="className02">À Distância</label>
                 <input type="radio" name="classType">
-            </div>
+            </div>    
         </div>
         <div class="item">
-            <div>Acompanhamento</div>
+            <div>Área de atuação</div>
             <div>
-                <span>História</span>
-                <span>Filosofia</span>
+                <input type="text" name="works">
             </div>
-        </div>
-        <div class="item">
-            <div>Desde</div>
-            <div>01/05/2020</div>
         </div>
 
     </section>

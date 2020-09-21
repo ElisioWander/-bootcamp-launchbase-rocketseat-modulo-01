@@ -1,0 +1,35 @@
+/*CREATE-TEACHER*/
+input,
+select {
+    width: 100%;
+    
+    padding: 8px 16px;
+    margin-top: 8px;
+
+    border: none;
+
+    outline: none;
+}
+
+select {
+    background: none;
+}
+
+input[type="date"],
+input[type="radio"] {
+    width: initial;
+}
+
+input[type="radio"] {
+    margin: 0 0 0 4px;
+}
+
+input+label {
+    margin-left: 16px;
+}
+
+.details div:nth-child(6) div:nth-child(2){
+    display: flex;
+
+    background-color: var(--primary-color);
+}
