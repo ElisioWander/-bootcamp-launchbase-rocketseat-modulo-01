@@ -41,7 +41,7 @@
             <div>Grau de escolaridade</div>
             <div>
                 <select name="school">
-                    <option value="" >Grau de escolaridade</option>
+                    <option value="" selected disabled>Selecione</option>
                     <option value="1">Ensino Médio Completo</option>
                     <option value="2">Ensino Superior Completo</option>
                     <option value="3">Mestrado</option>
@@ -53,16 +53,20 @@
             <div>Tipo de aula</div>
 
             <div>
-                <label for="className01">Presencial</label>
-                <input type="radio" name="classType">
-                <label for="className02">À Distância</label>
-                <input type="radio" name="classType">
+                <div class="label-group">
+                    <label for="className01">Presencial</label>
+                    <input type="radio" name="classType">
+                </div>
+                <div class="label-group">
+                    <label for="className02">À Distância</label>
+                    <input type="radio" name="classType">
+                </div>
             </div>    
         </div>
         <div class="item">
             <div>Área de atuação</div>
             <div>
-                <input type="text" name="works">
+                <input type="text" name="works" placeholder="digite o serviço oferecido...">
             </div>
         </div>
 
