@@ -1,0 +1,20 @@
+{
+  "teacher": [
+    {
+      "avatar": "https://google.com",
+      "name": "Elisio Wander",
+      "birth": "1997-04-02",
+      "school": "1",
+      "classType": "on",
+      "works": "dsadwasdada"
+    },
+    {
+      "avatar": "https://google.com",
+      "name": "Matheus Aguiar",
+      "birth": "1997-04-02",
+      "school": "2",
+      "classType": "on",
+      "works": "dsadwasdada"
+    }
+  ]
+}

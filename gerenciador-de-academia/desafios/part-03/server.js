@@ -12,6 +12,7 @@ nunjucks.configure("views", {
     noCache: true
 })
 
+server.use(express.urlencoded({ extended: true }))
 server.use(express.static("public"))
 server.use(routes)
 
