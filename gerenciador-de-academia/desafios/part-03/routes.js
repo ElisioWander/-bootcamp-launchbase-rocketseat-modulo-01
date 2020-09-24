@@ -10,8 +10,6 @@ routes.get("/teacher", (req, res) => {
     return res.render("teachers/teacher.html")
 })
 
-routes.post("/teacher", teacher.post)
-
 routes.get("/create", (req, res) => {
     return res.render("teachers/create-teacher.html")
 })
@@ -19,6 +17,9 @@ routes.get("/create", (req, res) => {
 routes.get("/students", (req, res) => {
     return res.render("students/students.html")
 })
+
+//POST ROUTS
+routes.post("/teacher", teacher.post)
 
 
 
