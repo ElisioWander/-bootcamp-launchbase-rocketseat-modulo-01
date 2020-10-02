@@ -11,7 +11,15 @@ exports.show = function(req, res) {
 
     if (!foundInstructor) return res.send("Instructor not found!")
 
-    return res.send(foundInstructor)
+    const instructor = {
+        //espalhar os elementos que já estão dentro do foundInstructor que não serão alterados
+        ...foundInstructor,
+        age: "",
+        services: foundInstructor.services.split(","), //split vai colocar cada elemento dentro de uma posição, mesmo que esses elementos não estejam dentro de um array.
+        created_at: ""
+    }
+
+    return res.render('instructors/show', { instructor })
 }
 
 /*CREATE*/
