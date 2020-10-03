@@ -6,44 +6,17 @@
       "name": "Elisio Wander",
       "birth": 859939200000,
       "gender": "M",
-      "services": "Musculação, Natação, Atletismo",
-      "created_at": 1600474511687
+      "services": "nada de mais",
+      "created_at": 1601750996733
     },
     {
       "id": 2,
       "avatar_url": "http://google.com",
-      "name": "Matheus Aguiar",
-      "birth": 912816000000,
-      "gender": "M",
-      "services": "nada de mais",
-      "created_at": 1600474538440
-    },
-    {
-      "id": 3,
-      "avatar_url": "http://google.com",
-      "name": "Joaquin",
-      "birth": 884217600000,
-      "gender": "M",
-      "services": "dstjfjuyjky",
-      "created_at": 1600474562253
-    },
-    {
-      "id": 4,
-      "avatar_url": "http://google.com",
-      "name": "Juliano Antônio",
-      "birth": 894067200000,
-      "gender": "M",
-      "services": "nada de mais",
-      "created_at": 1601332717489
-    },
-    {
-      "id": 5,
-      "avatar_url": "http://google.com",
-      "name": "Thomas Aurora",
-      "birth": 891475200000,
-      "gender": "M",
-      "services": "dsadwadsa",
-      "created_at": 1601600877249
+      "name": "Maria ",
+      "birth": 878428800000,
+      "gender": "F",
+      "services": "das",
+      "created_at": 1601751033622
     }
   ]
 }
