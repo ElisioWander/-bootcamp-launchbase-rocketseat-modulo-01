@@ -17,7 +17,7 @@ exports.show = function(req, res) {
         ...foundInstructor,
         age: age(foundInstructor.birth),
         services: foundInstructor.services.split(","), //split vai colocar cada elemento dentro de uma posição, mesmo que esses elementos não estejam dentro de um array.
-        created_at: ""
+        created_at: new Intl.DateTimeFormat("pt-BR").format(foundInstructor.created_at)
     }
 
     return res.render('instructors/show', { instructor })
