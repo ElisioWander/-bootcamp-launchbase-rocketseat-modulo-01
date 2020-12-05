@@ -17,7 +17,7 @@ exports.show = function(req, res) {
         ...foundInstructor,
         age: age(foundInstructor.birth),
         services: foundInstructor.services.split(","), //split vai colocar cada elemento dentro de uma posição, mesmo que esses elementos não estejam dentro de um array.
-        created_at: new Intl.DateTimeFormat("pt-BR").format(foundInstructor.created_at)
+        created_at: new Intl.DateTimeFormat('pt-BR').format(foundInstructor.created_at),
     }
 
     return res.render('instructors/show', { instructor })
@@ -53,6 +53,8 @@ exports.post = function(req, res) {
     fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err) {
         if (err) return res.send("Write file error")
 
-        return res.redirect("/instructors")
+        return res.redirect("instructors")
     })
+
+    
 }
