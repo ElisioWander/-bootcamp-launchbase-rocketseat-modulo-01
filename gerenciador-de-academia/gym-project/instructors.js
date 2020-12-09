@@ -1,6 +1,7 @@
 const fs = require('fs')
 const data = require('./data.json')
 const { age } = require('./utils')
+const Intl = require('intl')
 
 /*SHOW*/
 exports.show = function(req, res) {
@@ -53,7 +54,7 @@ exports.post = function(req, res) {
     fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err) {
         if (err) return res.send("Write file error")
 
-        return res.redirect("instructors")
+        return res.redirect("/instructors")
     })
 
     
