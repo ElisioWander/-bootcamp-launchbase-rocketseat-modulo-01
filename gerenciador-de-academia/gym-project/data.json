@@ -1,15 +1,6 @@
 {
   "instructors": [
     {
-      "id": 1,
-      "avatar_url": "https://source.unsplash.com/random",
-      "name": "Elisio Wander",
-      "birth": 859939200000,
-      "gender": "M",
-      "services": "nada de mais",
-      "created_at": 1601750996733
-    },
-    {
       "id": 2,
       "avatar_url": "https://source.unsplash.com/random",
       "name": "Maria ",
