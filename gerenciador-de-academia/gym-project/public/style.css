@@ -232,6 +232,35 @@ a.button:hover {
 
     background-color: lightcoral;
 }
+/*FORM*/
+
+/*TABLE CONTAINER*/
+.table-container {
+    display: block;
+
+    padding: 40px;
+}
+
+.table-container table {
+    border-spacing: 0;
+}
+
+.table-container thead tr th {
+    text-align: left;
+}
+
+td, th {
+    padding: 16px;
+    
+    border-bottom: solid 1px #D9D9D9;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/*TABLE CONTAINER*/
+
 
 
 
