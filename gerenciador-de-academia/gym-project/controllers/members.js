@@ -22,8 +22,6 @@ exports.show = function(req, res) {
         //espalhar os elementos que já estão dentro do foundMember que não serão alterados
         ...foundMember,
         age: age(foundMember.birth),
-        services: foundMember.services.split(","), //split vai colocar cada elemento dentro de uma posição, mesmo que esses elementos não estejam dentro de um array.
-        created_at: new Intl.DateTimeFormat('pt-BR').format(foundMember.created_at),
     }
 
     return res.render('members/show', { member })

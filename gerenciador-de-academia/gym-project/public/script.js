@@ -1,9 +1,9 @@
-const cards = document.querySelectorAll(".card__image__container")
+const currentPage = document.location.pathname
 
-for (let card of cards) {
-    card.addEventListener("click", function() {
-        const videoId = card.getAttribute("id") 
-        window.location.href = `/video?id=${ videoId }`       
-    })
+const menuItems = document.querySelectorAll("header .links a")
+
+for(item of menuItems) {
+    if(currentPage.includes(item.getAttribute("href"))) {
+        item.classList.add('active')
+    }
 }
-
