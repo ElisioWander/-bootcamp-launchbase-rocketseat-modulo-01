@@ -286,7 +286,8 @@ thead tr th {
     color: #777;
 }
 
-tbody tr td:last-child a {
+tbody tr td:last-child a,
+.table-container > a {
     text-transform: uppercase;
     text-decoration: none;
 
@@ -298,6 +299,11 @@ tbody tr td:last-child a {
 
     color: #FFF;
     background-color: var(--primary-color);
+}
+
+.table-container > a {
+    margin-bottom: 16px;
+    display: inline-block;
 }
 
 .table-container thead tr th:last-child,
