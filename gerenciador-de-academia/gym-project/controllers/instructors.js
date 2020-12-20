@@ -9,25 +9,6 @@ exports.index = function (req, res) {
 exports.create = function (req, res) {
     return res.render("instructors/create.html")
 }
-exports.show = function(req, res) {
-    const { id } = req.params
-
-    const foundInstructor = data.instructors.find(function(instructor) {
-        return instructor.id == id
-    })
-
-    if (!foundInstructor) return res.send("Instructor not found!")
-
-    const instructor = {
-        //espalhar os elementos que já estão dentro do foundInstructor que não serão alterados
-        ...foundInstructor,
-        age: age(foundInstructor.birth),
-        services: foundInstructor.services.split(","), //split vai colocar cada elemento dentro de uma posição, mesmo que esses elementos não estejam dentro de um array.
-        created_at: new Intl.DateTimeFormat('pt-BR').format(foundInstructor.created_at),
-    }
-
-    return res.render('instructors/show', { instructor })
-}
 exports.post = function(req, res) {
     const keys = Object.keys(req.body)
 
@@ -62,6 +43,25 @@ exports.post = function(req, res) {
 
     
 }
+exports.show = function(req, res) {
+    const { id } = req.params
+
+    const foundInstructor = data.instructors.find(function(instructor) {
+        return instructor.id == id
+    })
+
+    if (!foundInstructor) return res.send("Instructor not found!")
+
+    const instructor = {
+        //espalhar os elementos que já estão dentro do foundInstructor que não serão alterados
+        ...foundInstructor,
+        age: age(foundInstructor.birth),
+        services: foundInstructor.services.split(","), //split vai colocar cada elemento dentro de uma posição, mesmo que esses elementos não estejam dentro de um array.
+        created_at: new Intl.DateTimeFormat('pt-BR').format(foundInstructor.created_at),
+    }
+
+    return res.render('instructors/show', { instructor })
+}
 exports.edit = function(req, res) {
     const { id } = req.params
 
@@ -73,7 +73,7 @@ exports.edit = function(req, res) {
 
     const instructor = {
         ...foundInstructor,
-        birth: date(foundInstructor.birth)
+        birth: date(foundInstructor.birth).iso
     }
 
     return res.render("instructors/edit", { instructor })

@@ -1,6 +1,6 @@
 const fs = require('fs')
 const data = require('../data.json')
-const { age, date } = require('../utils')
+const { date } = require('../utils')
 const Intl = require('intl')
 
 exports.index = function (req, res) {
@@ -8,23 +8,6 @@ exports.index = function (req, res) {
 }
 exports.create = function (req, res) {
     return res.render("members/create.html")
-}
-exports.show = function(req, res) {
-    const { id } = req.params
-
-    const foundMember = data.members.find(function(member) {
-        return member.id == id
-    })
-
-    if (!foundMember) return res.send("Member not found!")
-
-    const member = {
-        //espalhar os elementos que já estão dentro do foundMember que não serão alterados
-        ...foundMember,
-        age: age(foundMember.birth),
-    }
-
-    return res.render('members/show', { member })
 }
 exports.post = function(req, res) {
     const keys = Object.keys(req.body)
@@ -70,10 +53,27 @@ exports.edit = function(req, res) {
 
     const member = {
         ...foundMember,
-        birth: date(foundMember.birth)
+        birth: date(foundMember.birth).iso
     }
 
     return res.render("members/edit", { member })
+}
+exports.show = function(req, res) {
+    const { id } = req.params
+
+    const foundMember = data.members.find(function(member) {
+        return member.id == id
+    })
+
+    if (!foundMember) return res.send("Member not found!")
+
+    const member = {
+        //espalhar os elementos que já estão dentro do foundMember que não serão alterados
+        ...foundMember,
+        birth: date(foundMember.birth).birthDay,
+    }
+
+    return res.render('members/show', { member })
 }
 exports.put = function(req, res) {
     const { id } = req.body
