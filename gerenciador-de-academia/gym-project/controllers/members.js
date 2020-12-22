@@ -20,7 +20,7 @@ exports.post = function(req, res) {
 
     birth = Date.parse(req.body.birth)
 
-    const id = 1
+    let id = 1
     const lastMember = data.members[data.members.length - 1]
 
     if(lastMember) {
