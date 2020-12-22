@@ -1,64 +1,14 @@
 {
-  "teacher": [
+  "teachers": [
     {
       "id": 1,
-      "avatar": "https://google.com",
-      "name": "Thomas Aurora",
-      "birth": 883699200000,
-      "school": "1",
-      "classType": "on",
-      "works": "dsadwasdada",
-      "created_at": 1600915613478
-    },
-    {
-      "id": 2,
-      "avatar": "https://google.com",
+      "avatar": "https://images.unsplash.com/photo-1594381898411-846e7d193883?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80",
       "name": "Elisio Wander",
       "birth": 859939200000,
       "school": "2",
       "classType": "on",
-      "works": "dsadwasdada",
-      "created_at": 1600915646668
-    },
-    {
-      "id": 3,
-      "avatar": "https://google.com",
-      "name": "Matheus Aguiar",
-      "birth": 891734400000,
-      "school": "2",
-      "classType": "on",
-      "works": "dsadwasdada",
-      "created_at": 1600915730172
-    },
-    {
-      "id": 4,
-      "avatar": "https://google.com",
-      "name": "Elisio Wander",
-      "birth": 859939200000,
-      "school": "1",
-      "classType": "on",
-      "works": "dsadwasdada",
-      "created_at": 1601084626481
-    },
-    {
-      "id": 5,
-      "avatar": "https://google.com",
-      "name": "Elisio Wander",
-      "birth": -62037964800000,
-      "school": "1",
-      "classType": "on",
-      "works": "dsadwasdada",
-      "created_at": 1601084812068
-    },
-    {
-      "id": 6,
-      "avatar": "https://google.com",
-      "name": "Elisio Wander",
-      "birth": 859939200000,
-      "school": "1",
-      "classType": "on",
-      "works": "dsadwasdada",
-      "created_at": 1601084916755
+      "works": "Musculação, CrossFit",
+      "created_at": 1608609846967
     }
   ]
 }
