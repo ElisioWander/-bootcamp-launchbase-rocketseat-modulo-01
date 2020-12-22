@@ -21,33 +21,33 @@
 
         <div class="item">
             <div>Nome Completo</div>
-            <div>Elisio Wander Ferreira Junior</div>
+            <div>{{ teacher.name }}</div>
         </div>
         <div class="item">
             <div>Idade</div>
-            <div>23</div>
+            <div>{{ teacher.birth }}</div>
         </div>
         <div class="item">
             <div>Grau de escolaridade</div>
-            <div>Doutorado</div>
+            <div>{{ teacher.school }}</div>
         </div>
         <div class="item">
             <div>Tipo de aula</div>
             <div>
-                <span>Presencial</span>
-                <span>Distância</span>
+                <span>{{ teacher.classType }}</span>
+                <span>{{ teacher.classType }}</span>
             </div>
         </div>
         <div class="item">
             <div>Acompanhamento</div>
             <div>
-                <span>História</span>
-                <span>Filosofia</span>
+                <span>{{ teacher.works }}</span>
+                <span>{{ teacher.works }}</span>
             </div>
         </div>
         <div class="item">
             <div>Desde</div>
-            <div>01/05/2020</div>
+            <div>{{ teacher.created_at }}</div>
         </div>
 
     </section>
