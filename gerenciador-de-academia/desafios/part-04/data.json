@@ -1,0 +1,44 @@
+{
+  "teachers": [
+    {
+      "id": 1,
+      "avatar": "https://images.unsplash.com/photo-1594381898411-846e7d193883?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80",
+      "name": "Elisio Wander",
+      "birth": 859939200000,
+      "school": "2",
+      "classType": "presential",
+      "works": "Musculação, CrossFit",
+      "created_at": 1608609846967
+    },
+    {
+      "id": 2,
+      "avatar": "https://images.unsplash.com/photo-1594381898411-846e7d193883?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80",
+      "name": "Matheus Aguiar",
+      "birth": 859939200000,
+      "school": "1",
+      "classType": "presential",
+      "works": "Musculação, CrossFit",
+      "created_at": 1609793260567
+    },
+    {
+      "id": 3,
+      "avatar": "https://images.unsplash.com/photo-1594381898411-846e7d193883?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80",
+      "name": "Thomas Aurora",
+      "birth": 859939200000,
+      "school": "2",
+      "classType": "distance",
+      "works": "Musculação, CrossFit",
+      "created_at": 1609793298258
+    },
+    {
+      "id": 4,
+      "avatar": "https://images.unsplash.com/photo-1594381898411-846e7d193883?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80",
+      "name": "Matheus Aguiar",
+      "birth": 859939200000,
+      "school": "2",
+      "classType": "distance",
+      "works": "Musculação, CrossFit, Jiu Jitsu, Muay Thai",
+      "created_at": 1609794046416
+    }
+  ]
+}

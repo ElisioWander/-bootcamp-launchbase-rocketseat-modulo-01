@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+
+{% block styles %}
+    <link rel="stylesheet" href="/styles/teachers.css">
+    <link rel="stylesheet" href="/styles/create-teacher.css">
+{% endblock styles %}
+
+{% block title %}
+    <title>Teachers</title>
+{% endblock title %}
+
+
+{% block content %}
+
+<form class="card" method="POST" action="/teachers">
+    <section
+        class="teacher" style="background: url(https://source.unsplash.com/collection/1361815/500x500) no-repeat center center / cover">
+    </section>
+
+    <section class="details">
+        <h3>Novo Professor</h3>
+
+        <div class="item">
+            <div>Avatar URL</div>
+            <input type="url" name="avatar" placeholder="http://">
+        </div>
+
+        <div class="item">
+            <div>Professor</div>
+            <div>
+                <input type="text" name="name" placeholder="nome completo">
+            </div>
+        </div>
+        <div class="item">
+            <div>Data de nascimento</div>
+            <div>
+                <input type="date" name="birth">
+            </div>
+        </div>
+        <div class="item">
+            <div>Grau de escolaridade</div>
+            <div>
+                <select name="school">
+                    <option value="" selected disabled>Selecione</option>
+                    <option value="1">Ensino Médio Completo</option>
+                    <option value="2">Ensino Superior Completo</option>
+                    <option value="3">Mestrado</option>
+                    <option value="4">Douturado</option>
+                </select>
+            </div>
+        </div>
+        <div class="item">
+            <div>Tipo de aula</div>
+
+            <div>
+                <div class="label-group">
+                    <label for="className01">Presencial</label>
+                    <input type="radio" name="classType" value="presential"
+                </div>
+                <div class="label-group">
+                    <label for="className02">À Distância</label>
+                    <input type="radio" name="classType" value="distance">
+                </div>
+            </div>    
+        </div>
+        <div class="item">
+            <div>Área de atuação</div>
+            <div>
+                <input type="text" name="works" placeholder="digite o serviço oferecido...">
+            </div>
+        </div>
+
+        <div class="item">
+            <button type="submit">Cadastrar</button>
+        </div>
+
+    </section>
+</form>
+
+{% endblock content %}

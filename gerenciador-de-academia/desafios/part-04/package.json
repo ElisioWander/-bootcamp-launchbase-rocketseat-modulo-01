@@ -1,0 +1,13 @@
+{
+  "name": "part-04",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "intl": "^1.2.5",
+    "nunjucks": "^3.2.2"
+  }
+}
