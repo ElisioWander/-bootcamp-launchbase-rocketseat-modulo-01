@@ -1,18 +1,18 @@
 <div class="item">
     <div>Avatar URL</div>
-    <input type="url" name="avatar" placeholder="http://">
+    <input type="url" name="avatar" value="{{ teacher.avatar }}" placeholder="http://">
 </div>
 
 <div class="item">
     <div>Professor</div>
     <div>
-        <input type="text" name="name" placeholder="nome completo">
+        <input type="text" name="name" value="{{ teacher.name }}" placeholder="nome completo">
     </div>
 </div>
 <div class="item">
     <div>Data de nascimento</div>
     <div>
-        <input type="date" name="birth">
+        <input type="date" name="birth" value="{{ teacher.birth }}">
     </div>
 </div>
 <div class="item">
@@ -20,10 +20,26 @@
     <div>
         <select name="school">
             <option value="" selected disabled>Selecione</option>
-            <option value="1">Ensino Médio Completo</option>
-            <option value="2">Ensino Superior Completo</option>
-            <option value="3">Mestrado</option>
-            <option value="4">Douturado</option>
+            <option value="height_school" {% if teacher.school == 'height_shool' %}
+            selected
+            {% endif %}
+            >Ensino Médio Completo
+            </option>
+            <option value="complete_higher_education" {% if teacher.school == 'complete_higher_education' %}
+            selected
+            {% endif %}
+            >Ensino Superior Completo
+            </option>
+            <option value="master" {% if teacher.school == 'master' %}
+            selected
+            {% endif %}
+            >Mestrado
+            </option>
+            <option value="doctorate_degree" {% if teacher.school == 'doctorate_degree' %}
+            selected
+            {% endif %}
+            >Douturado
+            </option>
         </select>
     </div>
 </div>
@@ -33,18 +49,24 @@
     <div>
         <div class="label-group">
             <label for="className01">Presencial</label>
-            <input type="radio" name="classType" value="presential">
+            <input type="radio" name="classType" value="presential" {% if teacher.classType == 'presential' %}
+            checked
+            {% endif %}
+            >
         </div>
         <div class="label-group">
             <label for="className02">À Distância</label>
-            <input type="radio" name="classType" value="distance">
+            <input type="radio" name="classType" value="distance" {% if teacher.classType == 'distance' %}
+            checked
+            {% endif %}
+            >
         </div>
     </div>    
 </div>
 <div class="item">
     <div>Área de atuação</div>
     <div>
-        <input type="text" name="works" placeholder="digite o serviço oferecido...">
+        <input type="text" name="works" value="{{ teacher.works }}" placeholder="digite o serviço oferecido...">
     </div>
 </div>
 
