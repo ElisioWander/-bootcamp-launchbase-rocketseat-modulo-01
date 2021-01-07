@@ -27,12 +27,12 @@ module.exports = {
             iso:`${year}-${month}-${day}`
         }
     },
-    graduation: function(schoolLevel) {
-        switch(schoolLevel) {
-            case 'height_shcool': return 'Ensino Médio Completo'
-            case 'complete_higher_education': return 'Ensino Superior Completo'
+    graduation: function(school) {
+        switch(school) {
+            case 'heightshcool': return 'Ensino Médio Completo'
+            case 'higher': return 'Ensino Superior Completo'
             case 'master': return 'Mestrado'
-            case 'doctorate_degree': return 'Doutorado'
+            case 'doctorate': return 'Doutorado'
         }
     }
 }

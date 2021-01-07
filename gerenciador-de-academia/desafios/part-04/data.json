@@ -12,13 +12,13 @@
     },
     {
       "id": 2,
-      "avatar": "https://images.unsplash.com/photo-1544168190-79c17527004f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80",
-      "name": "Lee",
+      "avatar": "https://images.unsplash.com/photo-1594381898411-846e7d193883?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80",
+      "name": "Elisio Wander Ferreira",
       "birth": 859939200000,
-      "school": "doctorate_degree",
-      "classType": "distance",
+      "school": "highschool",
+      "classType": "presential",
       "works": "Musculação, CrossFit",
-      "created_at": 1609969920603
+      "created_at": 1610048110030
     }
   ]
 }

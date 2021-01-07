@@ -80,8 +80,7 @@ exports.edit = (req, res) => {
 
     const teacher = {
         ...foundTeacher,
-        birth: date(foundTeacher.birth).iso,
-        school: graduation(foundTeacher.school)
+        birth: date(foundTeacher.birth).iso
     }
 
     return res.render("teachers/edit", { teacher })
