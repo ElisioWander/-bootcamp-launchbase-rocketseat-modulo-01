@@ -28,11 +28,36 @@ module.exports = {
         }
     },
     graduation: function(school) {
-        switch(school) {
-            case 'heightshcool': return 'Ensino Médio Completo'
-            case 'higher': return 'Ensino Superior Completo'
-            case 'master': return 'Mestrado'
-            case 'doctorate': return 'Doutorado'
+        console.log(school)
+
+        let graduation
+
+        switch (school) {
+            case 'highschool':
+                graduation = "Ensino Médio Completo"
+
+                return graduation
+                break
+            case 'higher':
+                graduation = "Ensino Superior Completo"
+
+                return graduation
+                break
+            case 'master':
+                graduation = "Mestrado"
+                
+                return graduation
+                break
+            case 'doctorate':
+                graduation = 'Doutorado'
+
+                return graduation
+                break
+            default:
+                console.log('No option selected!')
+                break
         }
+
+        console.log(graduation)
     }
 }
