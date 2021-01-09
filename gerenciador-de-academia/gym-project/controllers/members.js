@@ -1,6 +1,6 @@
 const fs = require('fs')
 const data = require('../data.json')
-const { date } = require('../utils')
+const { date, bloodType } = require('../utils')
 const Intl = require('intl')
 
 exports.index = function (req, res) {
@@ -71,6 +71,7 @@ exports.show = function(req, res) {
         //espalhar os elementos que já estão dentro do foundMember que não serão alterados
         ...foundMember,
         birth: date(foundMember.birth).birthDay,
+        blood: bloodType(foundMember.blood)
     }
 
     return res.render('members/show', { member })
