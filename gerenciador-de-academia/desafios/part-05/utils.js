@@ -28,8 +28,6 @@ module.exports = {
         }
     },
     graduation: function(school) {
-        console.log(school)
-
         let graduation
 
         switch (school) {
@@ -57,7 +55,5 @@ module.exports = {
                 console.log('No option selected!')
                 break
         }
-
-        console.log(graduation)
     }
 }

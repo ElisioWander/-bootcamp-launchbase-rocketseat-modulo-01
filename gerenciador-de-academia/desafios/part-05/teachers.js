@@ -90,7 +90,7 @@ exports.edit = (req, res) => {
 exports.update = (req, res) => {
     const { id } = req.body
 
-    const index = 0
+    let index = 0
 
     const foundTeacher = data.teachers.find(function(teacher, foundIndex) {
         if(id == teacher.id) {
@@ -101,5 +101,18 @@ exports.update = (req, res) => {
 
     if(!foundTeacher) return res.send("Teacher not found!")
 
-    console.log(foundTeacher)
+    const teacher = {
+        ...foundTeacher,
+        ...req.body,
+        birth: Date.parse(req.body.birth),
+        id: Number(req.body.id)
+    }
+
+    data.teachers[index] = teacher
+
+    fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err) {
+        if(err) return res.send("Write file error!")
+    })
+
+    return res.redirect(`/teachers/${ id }`)
 }
