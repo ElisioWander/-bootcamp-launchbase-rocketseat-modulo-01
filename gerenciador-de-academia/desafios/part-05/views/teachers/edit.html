@@ -11,20 +11,28 @@
 
 
 {% block content %}
-
-<form class="card" method="POST" action="/teachers?_method=PUT">
+<div class="card">
     <section
         class="teacher" style="background: url({{ teacher.avatar }}) no-repeat center center / cover">
     </section>
 
     <section class="details">
-        <h3>Editar Professor</h3>
+        <form method="POST" action="/teachers?_method=PUT">
 
-        {% include "teachers/partials/fields.html" %}
+            <h3>Editar Professor</h3>
+            {% include "teachers/partials/fields.html" %}
 
-        <input type="hidden" name="id" value="{{ teacher.id }}">
+            <input type="hidden" name="id" value="{{ teacher.id }}">
 
+            {% include "teachers/partials/flex-button.html" %}
+        </form>
+
+        <form action="/teachers?_method=DELETE">
+            <input type="hidden" name="id" value="{{ teacher.id }}">
+
+            {% include "teachers/partials/flex-button.html" %}
+        </form>
     </section>
-</form>
+</div>
 
 {% endblock content %}
