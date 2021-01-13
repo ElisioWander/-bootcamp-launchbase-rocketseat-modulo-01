@@ -17,7 +17,7 @@
 body {
     background-color: rgba(0, 0, 0, 0.8);
 }
-
+/*<SHOW BUTTON>*/
 .button {
     width: 100%;
 
@@ -48,14 +48,53 @@ body {
 
     transition: 200ms;
 }
+/*<SHOW BUTTON/>*/
 
-.flex-button {
+/*<SAVE-BUTTON>*/
+.details form {
+    position: relative;
+}
+
+#save-button {
     display: flex;
+    justify-content: flex-end;
 }
 
-.flex-button button:first-child {
-    margin-right: 5px;
-
-    color: white;
-    background-color: rgba(255, 0, 0, 0.781);
+#save-button button {
+    width: 48%;
 }
+/*<SAVE-BUTTON/>*/
+
+/*<DELETE-BUTTON>*/
+.delete-button {
+    width: 48%;
+    
+    padding: 12px;
+
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+
+    text-decoration: none;
+    text-align: center;
+
+    border: none;
+    border-radius: 8px;
+
+    color: #fff;
+    background-color: rgba(255, 0, 0, 0.705);
+
+    position: absolute;
+
+    bottom: 0;
+
+    transition: background-color 200ms;
+}
+
+.delete-button:hover {
+    cursor: pointer;
+
+    background-color: red;
+}
+
+/*<DELETE-BUTTON/>*/
