@@ -29,11 +29,13 @@
             </div>
         </form>
 
-        <form action="/teachers?_method=DELETE">
+        <form id="form-delete" method="POST" action="/teachers?_method=DELETE">
             <input type="hidden" name="id" value="{{ teacher.id }}">
 
             <button class="delete-button" type="submit">Deletar</button>
         </form>
+
+        {% include "../formDelete.html" %}
     </section>
 </div>
 
