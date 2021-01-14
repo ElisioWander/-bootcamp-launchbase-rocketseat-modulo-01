@@ -1,0 +1,34 @@
+{
+  "teachers": [
+    {
+      "id": 1,
+      "avatar": "https://images.unsplash.com/photo-1546483875-ad9014c88eba?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=674&q=80",
+      "name": "Elisio Wander",
+      "birth": 859939200000,
+      "school": "doctorate",
+      "classType": "presential",
+      "works": "Musculação, CrossFit, Jiu Jitsu, Muay Thai",
+      "created_at": 1610159614635
+    },
+    {
+      "id": 2,
+      "avatar": "https://images.unsplash.com/photo-1546483875-ad9014c88eba?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=674&q=80",
+      "name": "Joaquin Oliveira",
+      "birth": 859939200000,
+      "school": "doctorate",
+      "classType": "distance",
+      "works": "Musculação, CrossFit, Jiu Jitsu, Muay Thai",
+      "created_at": 1610159640578
+    },
+    {
+      "id": 3,
+      "avatar": "https://images.unsplash.com/photo-1544168190-79c17527004f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80",
+      "name": "Babuino Oliveira",
+      "birth": 859939200000,
+      "school": "highschool",
+      "classType": "presential",
+      "works": "Musculação, CrossFit, Jiu Jitsu, Muay Thai",
+      "created_at": 1610418262887
+    }
+  ]
+}

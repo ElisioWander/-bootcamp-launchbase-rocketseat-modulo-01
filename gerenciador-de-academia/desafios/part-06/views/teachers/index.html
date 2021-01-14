@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block styles %}
+    <link rel="stylesheet" href="/styles/teachers.css">
+{% endblock styles %}
+
+{% block title %}
+    <title>Teachers</title>
+{% endblock title %}
+
+
+{% block content %}
+
+<div class="card table-container">
+    <table width="100%">
+        <thead>
+            <tr>
+                <th>Nome Completo</th>
+                <th>Acompanhamento</th>
+                <th>Ação</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for teacher in teachers %}
+            <tr>
+                <td>
+                    <span style="blackground-img: url({{ teacher.avatar }})"></span>
+                    {{ teacher.name }}
+                </td>
+                <td>{{ teacher.works }}</td>
+                <td><a href="/teachers/{{ teacher.id }}">Ver</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock content %}
