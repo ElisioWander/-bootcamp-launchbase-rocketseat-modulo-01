@@ -169,6 +169,8 @@ header .links a:hover::after {
     font-family: 'Roboto', sans-serif;
 
     padding: 40px;
+
+    background-color: #222;
 }
 
 .table-container table {
@@ -176,11 +178,13 @@ header .links a:hover::after {
 }
 
 .table-container thead th {
+    font-size: 14px;
+
     text-align: left;
 
     text-transform: uppercase;
 
-    color: #999;
+    color: #fff;
 }
 
 th, td {
@@ -195,5 +199,50 @@ th, td {
 
 tbody tr:last-child td {
     border-bottom: none;
+}
+
+tbody tr td:first-child {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    align-items: center;
+}
+
+tbody tr td:first-child span {
+    width: 48px;
+    height: 48px;
+
+    border: solid 1px #777;
+    border-radius: 50%;
+
+    background-position: center;
+    background-size: cover;
+}
+
+tbody tr td:last-child a {
+    padding: 8px 16px;
+
+    text-decoration: none;
+    text-transform: uppercase;
+
+    border-radius: 4px;
+
+    cursor: pointer;
+
+    color: #111;
+    background-color: var(--primary-color);
+
+    transition: background-color 200ms;
+}
+
+tbody tr td:last-child a:hover {
+    font-weight: bold;
+
+    color: #111;
+    background-color: #fff;
+}
+
+.table-container thead tr th:last-child,
+td:last-child {
+    text-align: center;
 }
 
