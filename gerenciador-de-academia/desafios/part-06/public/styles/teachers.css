@@ -138,7 +138,7 @@ header .links a:hover::after {
     color: #555;
 }
 
-.item div span {
+.item span {
     padding: 2px 24px;
     margin: 8px 0px 16px 0;
 
@@ -208,8 +208,8 @@ tbody tr td:first-child {
 }
 
 tbody tr td:first-child span {
-    width: 48px;
-    height: 48px;
+    width: 40px;
+    height: 40px;
 
     border: solid 1px #777;
     border-radius: 50%;
@@ -244,5 +244,18 @@ tbody tr td:last-child a:hover {
 .table-container thead tr th:last-child,
 td:last-child {
     text-align: center;
+}
+
+tbody tr td:nth-child(2) span {
+    padding: 2px 8px;
+
+    border-radius: 4px;
+
+    font-weight: bold;
+        
+    display: inline-block;
+
+    color: #111;
+    background-color: #fff;
 }
 
