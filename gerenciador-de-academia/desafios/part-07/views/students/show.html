@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block styles %}
+    <link rel="stylesheet" href="/styles/style.css">
+{% endblock styles %}
+
+{% block title %}
+    <title>student</title>
+{% endblock title %}
+
+
+{% block content %}
+
+<div class="card">
+    <section class="student" style="background: url({{ student.avatar }}) no-repeat center center / cover">
+
+    </section>
+
+    <section class="details">
+        <h3>Detalhes</h3>
+
+        <div class="item">
+            <div>Nome Completo</div>
+            <div>{{ student.name }}</div>
+        </div>
+        <div class="item">
+            <div>Idade</div>
+            <div>{{ student.age }}</div>
+        </div>
+        <div class="item">
+            <div>Grau de escolaridade</div>
+            <div>{{ student.school }}</div>
+        </div>
+        <div class="item">
+            <div>Tipo de aula</div>
+            <div>
+                <span>{{ "Presencial" if student.classType == "presential" else "Distância" }}</span>
+            </div>
+        </div>
+        <div class="item">
+            <div>Acompanhamento</div>
+            <div>
+                {% for work in student.works %}
+                <span>{{ work }}</span>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="item">
+            <div>Desde</div>
+            <div>{{ student.created_at }}</div>
+        </div>
+
+        <a class="button" href="/students/{{ student.id }}/edit">Editar</a>
+
+    </section>
+</div>
+
+{% endblock content %}

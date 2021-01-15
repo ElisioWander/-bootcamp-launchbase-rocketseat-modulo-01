@@ -1,0 +1,43 @@
+<div class="item">
+    <div>Avatar URL</div>
+    <input type="url" name="avatar" value="{{ teacher.avatar }}" placeholder="http://">
+</div>
+
+<div class="item">
+    <div>Aluno</div>
+    <div>
+        <input type="text" name="name" value="{{ teacher.name }}" placeholder="nome completo">
+    </div>
+</div>
+<div class="item">
+    <div>Email</div>
+    <div>
+        <input type="email" name="email" placeholder="digite seu email">
+    </div>
+</div>
+<div class="item">
+    <div>Data de nascimento</div>
+    <div>
+        <input type="date" name="birth" value="{{ teacher.birth }}">
+    </div>
+</div>
+<div class="item">
+    <div>Grau de escolaridade</div>
+    <div>
+        <select name="school">
+            <option value="" selected>Selecione</option>
+            <option value="05fundamental">5º ano ensino fundamental</option>
+            <option value="06fundamental">6º ano ensino fundamental</option>
+            <option value="07fundamental">7º ano ensino fundamental</option>
+            <option value="08fundamental">8º ano ensino fundamental</option>
+            <option value="09fundamental">9º ano ensino fundamental</option>
+            <option value="01medio">1º ano ensino médio</option>
+            <option value="02medio">2º ano ensino médio</option>
+            <option value="03medio">3º ano ensino médio</option>
+        </select>
+    </div>
+</div>
+<div class="item">
+    <div>Carga horária semanal</div>
+    <input type="number" name="hour" max="24" min="1">
+</div>

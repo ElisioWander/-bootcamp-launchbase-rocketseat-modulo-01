@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block styles %}
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/create.css">
+{% endblock styles %}
+
+{% block title %}
+    <title>Teacher</title>
+{% endblock title %}
+
+
+{% block content %}
+<div class="card">
+    <section
+        class="teacher" style="background: url({{ teacher.avatar }}) no-repeat center center / cover">
+    </section>
+
+    <section class="details">
+        <form method="POST" action="/teachers?_method=PUT">
+
+            <h3>Editar Professor</h3>
+            {% include "teachers/partials/fields.html" %}
+
+            <input type="hidden" name="id" value="{{ teacher.id }}">
+
+            <div class="item" id="save-button">
+                <button type="submit">Salvar</button>
+            </div>
+        </form>
+
+        <form id="form-delete" method="POST" action="/teachers?_method=DELETE">
+            <input type="hidden" name="id" value="{{ teacher.id }}">
+
+            <button class="delete-button" type="submit">Deletar</button>
+        </form>
+
+        {% include "../formDelete.html" %}
+    </section>
+</div>
+
+{% endblock content %}
