@@ -41,5 +41,17 @@ exports.post = (req, res) => {
 }
 
 exports.show = (req, res) => {
-    return res.render("students/show.html")
+    const { id } = req.params
+
+    const foundStudent = data.students.find((student) => {
+        return student.id == id
+    })
+
+    if(!foundStudent) return res.send("Student not found!")
+
+    const student = {
+        ...foundStudent
+    }
+
+    return res.render("students/show", { student })
 }
