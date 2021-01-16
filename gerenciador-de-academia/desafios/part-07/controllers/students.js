@@ -1,5 +1,6 @@
 const data = require('../data.json')
 const fs = require('fs')
+const { grade, date } = require('../utils')
 
 exports.index = (req, res) => {
     return res.render("students/index.html")
@@ -50,8 +51,14 @@ exports.show = (req, res) => {
     if(!foundStudent) return res.send("Student not found!")
 
     const student = {
-        ...foundStudent
+        ...foundStudent,
+        birth: date(foundStudent.birth).birthDay,
+        school: grade(foundStudent.school)
     }
 
     return res.render("students/show", { student })
+}
+
+exports.edit = (req, res) => {
+    return res.render("students/edit")
 }

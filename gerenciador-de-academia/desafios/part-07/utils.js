@@ -24,7 +24,8 @@ module.exports = {
             day,
             month,
             year,
-            iso:`${year}-${month}-${day}`
+            iso:`${year}-${month}-${day}`,
+            birthDay: `${day}/${month}`
         }
     },
     graduation: function(school) {
@@ -54,6 +55,54 @@ module.exports = {
             default:
                 console.log('No option selected!')
                 break
+        }
+    },
+    grade: function(school) {
+        let grade
+
+        switch (school) {
+            case '5EF':
+                grade = '5º ano ensino fundamental'
+
+                return grade
+                break;
+            case '6EF':
+                grade = '6º ano ensino fundamental'
+
+                return grade
+                break
+            case '7EF':
+                grade = '7º ano ensino fundamental'
+
+                return grade
+                break
+            case '8EF':
+                grade = '8º ano ensino fundamental'
+
+                return grade
+                break
+            case '9EF':
+                grade = '9º ano ensino fundamental'
+
+                return grade
+                break
+            case '1EM':
+                grade = '1º ano ensino médio'
+
+                return grade
+                break
+            case '2EM':
+                grade = '2º ano ensino médio'
+
+                return grade
+                break
+            case '3EM':
+                grade = '3º ano ensino médio'
+
+                return grade
+                break
+            default:
+                break;
         }
     }
 }
