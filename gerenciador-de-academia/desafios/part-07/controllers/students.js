@@ -3,7 +3,16 @@ const fs = require('fs')
 const { grade, date } = require('../utils')
 
 exports.index = (req, res) => {
-    return res.render("students/index.html")
+    const students = data.students.map((student) => {
+        const newStudent = {
+            ...student,
+            school: grade(student.school)
+        }
+
+        return newStudent
+    })
+
+    return res.render("students/index.html", { students })
 }
 
 exports.create = (req, res) => {
@@ -60,5 +69,63 @@ exports.show = (req, res) => {
 }
 
 exports.edit = (req, res) => {
-    return res.render("students/edit")
+    const { id } = req.params
+
+    const foundStudent = data.students.find((student) => {
+        return student.id == id
+    })
+
+    if(!foundStudent) return res.send("student not found!")
+
+    const student = {
+        ...foundStudent,
+        birth: date(foundStudent.birth).iso
+    }
+
+    return res.render("students/edit", { student })
+}
+
+exports.update = (req, res) => {
+    const { id } = req.body
+
+    let index = 0
+
+    const foundStudent = data.students.find((student, foundIndex) => {
+        if(student.id == id) {
+            index = foundIndex
+            return true
+        }
+    })
+
+    if(!foundStudent) return res.send("student not found!")
+
+    const student = {
+        ...foundStudent,
+        ...req.body
+    }
+
+    data.students[index] = student
+
+    fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err) {
+        if(err) return res.send("Write file error!")
+    })
+
+
+    return res.redirect(`/students/${ id }`)
+}
+
+exports.delete = (req, res) => {
+    const { id } = req.body
+
+    const filteredStudents = data.students.filter((student) => {
+        return student.id != id
+    })
+
+    data.students = filteredStudents
+
+    fs.writeFile("data.json", JSON.stringify(data, null, 2), (err) => {
+        if(err) return res.send("Write file error!")
+    })
+
+    return res.redirect("/students")
 }

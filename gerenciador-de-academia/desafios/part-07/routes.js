@@ -21,6 +21,8 @@ routes.get("/students/create", students.create)
 routes.get("/students/:id", students.show)
 routes.get("/students/:id/edit", students.edit)
 routes.post("/students", students.post)
+routes.put("/students", students.update)
+routes.delete("/students", students.delete)
 
 
 

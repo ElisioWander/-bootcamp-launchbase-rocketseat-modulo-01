@@ -135,7 +135,7 @@ exports.delete = (req, res) => {
     data.teachers = filteredTeachers
 
     fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err) {
-        if(err) res.send("Write file error!")
+        if(err)  return res.send("Write file error!")
     })
 
     return res.redirect("/teachers")

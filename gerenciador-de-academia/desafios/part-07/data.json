@@ -2,32 +2,23 @@
   "students": [
     {
       "id": 1,
-      "avatar": "https://images.unsplash.com/photo-1548449112-96a38a643324?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80",
+      "avatar": "https://images.unsplash.com/flagged/photo-1574110906643-8311b0ce29d3?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZmVzc29yfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
       "name": "Elisio Wander",
       "email": "elisio741@hotmail.com",
       "birth": 859939200000,
-      "school": "03medio",
-      "hour": "2"
-    },
-    {
-      "id": 2,
-      "avatar": "https://images.unsplash.com/photo-1594381898411-846e7d193883?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80",
-      "name": "Matheus Aguiar",
-      "email": "mat@outlook.com",
-      "birth": 859939200000,
-      "school": "5EF",
-      "hour": "4"
+      "school": "3EM",
+      "hour": "8"
     }
   ],
   "teachers": [
     {
       "id": 1,
       "avatar": "https://images.unsplash.com/photo-1548449112-96a38a643324?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nnx8dGVhY2hlcnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-      "name": "Elisio Wander",
+      "name": "Elisio Wander Ferreira",
       "birth": 859939200000,
       "school": "master",
       "classType": "presential",
-      "works": "Musculação, CrossFit, Jiu Jitsu, Muay Thai",
+      "works": "Musculação, CrossFit, Jiu Jitsu",
       "created_at": 1610159614635
     },
     {
