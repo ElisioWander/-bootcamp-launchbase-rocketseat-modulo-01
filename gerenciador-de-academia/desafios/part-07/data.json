@@ -8,6 +8,24 @@
       "birth": 859939200000,
       "school": "3EM",
       "hour": "8"
+    },
+    {
+      "id": "2",
+      "avatar": "https://images.unsplash.com/photo-1516846655609-8486750528ed?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NjJ8fHRlZW5hZ2VyfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      "name": "Maria Tereza",
+      "email": "maria@outlook.com",
+      "birth": "1999-10-08",
+      "school": "3EM",
+      "hour": "5"
+    },
+    {
+      "id": "3",
+      "avatar": "https://images.unsplash.com/photo-1594381898411-846e7d193883?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80",
+      "name": "Fernanda Oliveira",
+      "email": "fernandaOliveira@outlook.com",
+      "birth": "1999-04-02",
+      "school": "1EM",
+      "hour": "5"
     }
   ],
   "teachers": [

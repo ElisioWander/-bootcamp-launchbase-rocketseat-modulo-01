@@ -218,7 +218,14 @@ tbody tr td:first-child span {
     background-size: cover;
 }
 
-tbody tr td:last-child a {
+.table-container a {
+    margin: 0 0 8px 16px;
+
+    display: inline-block;
+}
+
+tbody tr td:last-child a,
+.table-container a {
     padding: 8px 16px;
 
     text-decoration: none;
@@ -234,7 +241,8 @@ tbody tr td:last-child a {
     transition: background-color 200ms;
 }
 
-tbody tr td:last-child a:hover {
+tbody tr td:last-child a:hover,
+.table-container a:hover {
     font-weight: bold;
 
     color: #111;
