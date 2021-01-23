@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block styles %}
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/create.css">
+{% endblock styles %}
+
+{% block title %}
+    <title>Teachers</title>
+{% endblock title %}
+
+
+{% block content %}
+
+<form class="card" method="POST" action="/teachers">
+    <section
+        class="teacher" style="background: url(https://source.unsplash.com/collection/1361815/500x500) no-repeat center center / cover">
+    </section>
+
+    <section class="details">
+        <h3>Novo Professor</h3>
+
+        {% include "teachers/partials/fields.html" %}
+
+        <div class="item">
+            <button type="submit">Cadastrar</button>
+        </div>
+
+    </section>
+</form>
+
+{% endblock content %}
