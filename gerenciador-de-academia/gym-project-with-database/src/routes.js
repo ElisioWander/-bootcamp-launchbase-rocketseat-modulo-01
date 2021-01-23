@@ -1,7 +1,7 @@
 const { get } = require('browser-sync')
 const express = require('express')
-const instructors = require('./controllers/instructors')
-const members = require('./controllers/members')
+const instructors = require('./app/controllers/instructors')
+const members = require('./app/controllers/members')
 
 const routes = express.Router()
 
