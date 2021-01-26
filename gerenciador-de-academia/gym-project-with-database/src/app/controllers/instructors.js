@@ -3,7 +3,14 @@ const db = require('../../config/db')
 
 module.exports = {
     index(req, res) {
-        return res.render("instructors/index.html")
+        db.query(`SELECT * FROM instructors`, function(err, results) {
+            if(err) res.send("Database error!")
+
+            console.log(results.rows)
+
+            return res.render("instructors/index.html", { instructors: results.rows })
+        })
+
     },
     create(req, res) {
         return res.render("instructors/create.html")
@@ -29,12 +36,14 @@ module.exports = {
             RETURNING id
         `
 
+        const { name, avatar_url, gender, services, birth } = req.body
+
         const values = [
-            req.body.name,
-            req.body.avatar_url,
-            req.body.gender,
-            req.body.services,
-            date(req.body.birth).iso,
+            name,
+            avatar_url,
+            gender,
+            services,
+            date(birth).iso,
             date(Date.now()).iso
         ]
 
