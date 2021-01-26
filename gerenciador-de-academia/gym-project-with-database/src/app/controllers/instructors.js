@@ -1,16 +1,11 @@
 const { age, date } = require('../../lib/utils')
-const db = require('../../config/db')
+const Instructor = require('../models/Instructor')
 
 module.exports = {
     index(req, res) {
-        db.query(`SELECT * FROM instructors`, function(err, results) {
-            if(err) res.send("Database error!")
-
-            console.log(results.rows)
-
-            return res.render("instructors/index.html", { instructors: results.rows })
+        Instructor.all(function(instructors) {
+            return res.render("instructors/index.html", { instructors })
         })
-
     },
     create(req, res) {
         return res.render("instructors/create.html")
@@ -23,42 +18,30 @@ module.exports = {
                 return res.send("please, fill all fields")
             }
         }
-        
-        const query = `
-            INSERT INTO instructors (
-                name,
-                avatar_url,
-                gender,
-                services,
-                birth,
-                created_at
-            ) VALUES ($1, $2, $3, $4, $5, $6)
-            RETURNING id
-        `
 
-        const { name, avatar_url, gender, services, birth } = req.body
-
-        const values = [
-            name,
-            avatar_url,
-            gender,
-            services,
-            date(birth).iso,
-            date(Date.now()).iso
-        ]
-
-        db.query(query, values, function(err, results) {
-            if(err) return res.send("Database error!")
-
-            return res.redirect(`/instructors/${results.rows[0].id}`)
+        Instructor.create(req.body, function(instructor) {
+            return res.redirect(`/instructors/${instructor.id}`)
         })
-        
     },
     show(req, res) {
-        return
+        Instructor.find(req.params.id, function(instructor) {
+            if(!instructor) return res.send("Instructor not found!")
+
+            instructor.age = age(instructor.birth)
+            instructor.services = instructor.services.split(",")
+            instructor.created_at = date(instructor.created_at).format
+
+            return res.render("instructors/show", { instructor })
+        })
     },
     edit(req, res) {
-        return
+        Instructor.find(req.params.id, function(instructor) {
+            if(!instructor) return res.send("Instructor not found!")
+
+            instructor.birth = date(instructor.birth).iso
+
+            return res.render("instructors/edit", { instructor })
+        })
     },
     put(req, res) {
         const keys = Object.keys(req.body)
