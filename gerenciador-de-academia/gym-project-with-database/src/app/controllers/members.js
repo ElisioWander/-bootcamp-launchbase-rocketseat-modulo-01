@@ -1,9 +1,12 @@
 const { date, bloodType } = require('../../lib/utils')
+const Member = require('../models/Member')
 
 
 module.exports = {
     index(req, res) {
-        return res.render("members/index.html")
+        Member.all(function(members) {
+            return res.render("members/index.html", { members })
+        })
     },
     create(req, res) {
         return res.render("members/create.html")
@@ -17,13 +20,28 @@ module.exports = {
             }
         }
 
-        return
+        Member.create(req.body, function(member) {
+            return res.redirect(`/members/${member.id}`)
+        })
     },
     edit(req, res) {
-        return
+        Member.find(req.params.id, function(member) {
+            if(!member) return res.send("Member not found!")
+
+            member.birth = date(member.birth).iso
+
+            return res.render("members/edit.html", { member })
+        })
     },
     show(req, res) {
-        return
+        Member.find(req.params.id, function(member) {
+            if(!member) return res.send("member not fond!")
+
+            member.birth = date(member.birth).birthDay
+            member.blood = bloodType(member.blood)
+
+            return res.render("members/show.html", { member })
+        })
     },
     put(req, res) {
         const keys = Object.keys(req.body)
@@ -34,9 +52,13 @@ module.exports = {
             }
         }
 
-        return
+        Member.update(req.body, function() {
+            return res.redirect(`/members/${req.body.id}`)
+        })
     },
     delete(req, res) {
-        return
+        Member.delete(req.body.id, function() {
+            return res.redirect("/members")
+        })
     }
 }
