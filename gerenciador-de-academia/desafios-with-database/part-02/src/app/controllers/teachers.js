@@ -4,6 +4,10 @@ const Teacher = require('../../model/Teacher')
 module.exports = {
     index(req, res) {
         Teacher.all(function(teachers) {
+            for(let teacher of teachers) {
+                teacher.subjects_taught = teacher.subjects_taught.split(",")
+            }
+
             return res.render("teachers/index.html", { teachers })
         })
     },
@@ -30,6 +34,7 @@ module.exports = {
             teacher.age = age(teacher.birth_date)
             teacher.created_at = date(teacher.created_at).format
             teacher.subjects_taught = teacher.subjects_taught.split(",")
+            teacher.education_level = graduation(teacher.education_level)
             
             return res.render("teachers/show", { teacher })
         })
@@ -52,7 +57,9 @@ module.exports = {
             }
         }
 
-        return
+        Teacher.update(req.body, function() {
+            return res.redirect(`/teachers/${req.body.id}`)
+        })
     },
     delete(req, res) {
         Teacher.delete(req.body.id, function() {

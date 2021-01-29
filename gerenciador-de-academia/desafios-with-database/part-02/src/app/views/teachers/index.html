@@ -12,7 +12,7 @@
 {% block content %}
 
 <div class="card table-container">
-    <a href="/teachers/create">Novo</a>
+    <div><a href="/teachers/create">Novo</a></div>
     <table width="100%">
         <thead>
             <tr>
@@ -29,8 +29,8 @@
                     {{ teacher.name }}
                 </td>
                 <td>
-                    {% for work in teacher.subject_taught %}
-                    <span class="item">{{ work }}</span>
+                    {% for subject_taught in teacher.subjects_taught %}
+                    <span class="item">{{ subject_taught }}</span>
                     {% endfor %}
                 </td>
                 <td><a href="/teachers/{{ teacher.id }}">Ver</a></td>

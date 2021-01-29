@@ -20,10 +20,10 @@
     <div>
         <select name="education_level">
             <option value="" selected disabled>Selecione</option>
-            <option value="highschool" {% if teacher.school == 'highschool' %} selected {% endif %}>Ensino Médio Completo</option>
-            <option value="higher" {% if teacher.school == 'higher' %} selected {% endif %}>Ensino Superior Completo</option>
-            <option value="master" {% if teacher.school == 'master' %} selected {% endif %}>Mestrado</option>
-            <option value="doctorate" {% if teacher.school == 'doctorate' %} selected {% endif %}>Douturado</option>
+            <option value="highschool" {% if teacher.education_level == 'highschool' %} selected {% endif %}>Ensino Médio Completo</option>
+            <option value="higher" {% if teacher.education_level == 'higher' %} selected {% endif %}>Ensino Superior Completo</option>
+            <option value="master" {% if teacher.education_level == 'master' %} selected {% endif %}>Mestrado</option>
+            <option value="doctorate" {% if teacher.education_level == 'doctorate' %} selected {% endif %}>Douturado</option>
         </select>
     </div>
 </div>
