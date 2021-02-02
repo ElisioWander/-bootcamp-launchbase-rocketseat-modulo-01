@@ -170,6 +170,19 @@ header .links a:hover::after {
 
     background-color: var(--secondary-color);
 }
+
+.details .item select {
+    width: 100%;
+
+    padding: 8px 32px;
+
+    font-size: 16px;
+    font-weight: bold;
+    
+    border-radius: 4px;
+    
+    color: #333;
+}
 /*DETAILS ITEM*/
 
 /*FORM*/

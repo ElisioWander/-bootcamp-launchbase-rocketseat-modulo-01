@@ -9,7 +9,9 @@ module.exports = {
         })
     },
     create(req, res) {
-        return res.render("members/create.html")
+        Member.instructorsSelectOptions(function(options) {
+            return res.render("members/create.html", { instructorOptions: options })
+        })
     },
     post(req, res) {
         const keys = Object.keys(req.body)
