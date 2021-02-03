@@ -1,0 +1,106 @@
+/*CREATE-TEACHER*/
+/*INPUT*/
+input,
+select {
+    width: 100%;
+    
+    padding-top: 8px;
+    margin-top: 8px;
+
+    border: none;
+
+    font-size: 16px;
+    font-family: 'Roboto';
+    font-weight: bold;
+
+    color: #555;
+
+    outline: none;
+
+    position: relative;
+}
+
+input[type="date"], 
+select {
+    font-size: 16px;
+    font-family: Roboto;
+    font-weight: bold;
+    color: #555;
+}
+
+select {
+    background: none;
+}
+
+input[type="date"],
+input[type="radio"] {
+    width: initial;
+}
+
+input[type="radio"] {
+    margin: 0 0 0 4px;
+}
+
+input+label {
+    margin-left: 16px;
+}
+/*INPUT*/
+
+/*CLASS DETAILS/DIV*/
+.details div:nth-child(6) div:nth-child(2){
+    display: flex;
+}
+/*CLASS DETAILS/DIV*/
+
+/*LABEL-GROUP*/
+.label-group {
+    display: flex;
+    align-items: center;
+
+    margin: 8px 0 8px;
+    padding: 8px 16px;
+
+    border-radius: 8px;
+
+
+    background-color: var(--primary-color);
+}
+
+.label-group+.label-group {
+    margin-left: 8px;
+}
+
+.label-group label {
+    font-size: 16px;
+    font-weight: bold;
+
+    color: #555;
+}
+/*LABEL-GROUP*/
+
+/*BUTTOM*/
+.item button {
+    width: 100%;
+
+    padding: 12px;
+    
+    font-size: 16px;
+    font-family: 'Roboto';
+    font-weight: bold;
+    
+    border: none;
+    border-radius: 8px;
+
+    color: #555;
+    background-color: var(--primary-color);
+}
+
+.item button:hover {
+    cursor: pointer;
+
+    color: var(--primary-color);
+    background-color: rgba(0, 0, 0, 0.8);
+
+    transition: 200ms;
+}
+/*BUTTON*/

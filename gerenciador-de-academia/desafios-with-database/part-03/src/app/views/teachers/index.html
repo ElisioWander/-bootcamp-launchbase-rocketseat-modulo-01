@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block styles %}
+    <link rel="stylesheet" href="/styles/style.css">
+{% endblock styles %}
+
+{% block title %}
+    <title>Teachers</title>
+{% endblock title %}
+
+
+{% block content %}
+
+<div class="card table-container">
+    <div><a href="/teachers/create">Novo</a></div>
+    <table width="100%">
+        <thead>
+            <tr>
+                <th>Nome Completo</th>
+                <th>Acompanhamento</th>
+                <th>Alunos</th>
+                <th>Ação</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for teacher in teachers %}
+            <tr>
+                <td>
+                    <span style="background-image: url({{ teacher.avatar_url }})"></span>
+                    {{ teacher.name }}
+                </td>
+                <td>
+                    {% for subject_taught in teacher.subjects_taught %}
+                    <span class="item">{{ subject_taught }}</span>
+                    {% endfor %}
+                </td>
+                <td>{{ teacher.total_students }}</td>
+                <td><a href="/teachers/{{ teacher.id }}">Ver</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block styles %}
+    <link rel="stylesheet" href="/styles/style.css">
+{% endblock styles %}
+
+{% block title %}
+    <title>students</title>
+{% endblock title %}
+
+
+{% block content %}
+
+<div class="card table-container">
+    <div><a href="/students/create">Novo</a></div>
+    
+    <table width="100%">
+        <thead>
+            <tr>
+                <th>Nome Completo</th>
+                <th>email</th>
+                <th>Ano escolar</th>
+                <th>Ação</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for student in students %}
+            <tr>
+                <td>
+                    <span style="background-image: url({{ student.avatar_url }})"></span>
+                    {{ student.name }}
+                </td>
+                <td>{{ student.email }}</td>
+                <td>{{ student.school_level }}</td>
+                <td><a href="/students/{{ student.id }}">Ver</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock content %}

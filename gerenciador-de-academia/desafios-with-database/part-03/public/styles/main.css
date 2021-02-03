@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --primary-color: #50fa7b;
+    --second-color: #222;
+}
+
+/*GLOBAL*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*GLOBAL*/
+
+/*BODY*/
+body {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+/*<SHOW BUTTON>*/
+.button {
+    width: 100%;
+
+    display: inline-block;
+
+    margin-top: 8px;
+    padding: 12px;
+    
+    font-size: 16px;
+    font-family: 'Roboto';
+    font-weight: bold;
+
+    text-decoration: none;
+    text-align: center;
+    
+    border: none;
+    border-radius: 8px;
+
+    color: #555;
+    background-color: var(--primary-color);
+}
+
+.button:hover {
+    cursor: pointer;
+
+    color: var(--primary-color);
+    background-color: rgba(0, 0, 0, 0.8);
+
+    transition: 200ms;
+}
+/*<SHOW BUTTON/>*/
+
+/*<SAVE-BUTTON>*/
+.details form {
+    position: relative;
+}
+
+#save-button {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#save-button button {
+    width: 48%;
+}
+/*<SAVE-BUTTON/>*/
+
+/*<DELETE-BUTTON>*/
+.delete-button {
+    width: 48%;
+    
+    padding: 12px;
+
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+
+    text-decoration: none;
+    text-align: center;
+
+    border: none;
+    border-radius: 8px;
+
+    color: #fff;
+    background-color: rgba(255, 0, 0, 0.705);
+
+    position: absolute;
+
+    bottom: 0;
+
+    transition: background-color 200ms;
+}
+
+.delete-button:hover {
+    cursor: pointer;
+
+    background-color: red;
+}
+
+/*<DELETE-BUTTON/>*/
