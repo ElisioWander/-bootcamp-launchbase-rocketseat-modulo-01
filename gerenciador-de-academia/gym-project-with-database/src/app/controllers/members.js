@@ -32,7 +32,10 @@ module.exports = {
 
             member.birth = date(member.birth).iso
 
-            return res.render("members/edit.html", { member })
+            Member.instructorsSelectOptions(function(options) {
+
+                return res.render("members/edit.html", { member, instructorOptions: options })
+            })
         })
     },
     show(req, res) {
@@ -43,6 +46,7 @@ module.exports = {
             member.blood = bloodType(member.blood)
 
             return res.render("members/show.html", { member })
+            
         })
     },
     put(req, res) {
