@@ -306,7 +306,7 @@ tbody tr td:last-child a,
 
     font-size: 12px;
 
-    padding: 8px 16px;
+    padding: 8px 32px;
 
     border-radius: 4px;
 
@@ -315,6 +315,12 @@ tbody tr td:last-child a,
 }
 
 .table-container > a {
+    width: 120px;
+
+    text-transform: capitalize;
+
+    font-size: 16px;
+
     margin-bottom: 16px;
     display: inline-block;
 }
@@ -357,5 +363,12 @@ td:last-child {
 
 .table-container .header form button {
     margin: 0;
+
+    transition: background-color 200ms;
+}
+
+.table-container .header form button:hover {
+    color: #000;
+    background-color: var(--secondary-color);
 }
 /*FILTER*/
