@@ -10,17 +10,26 @@ for(item of menuItems) {
 
 //totalPages = 20
 //selectedPage = 15
-//[1...13, 14, 15, 16, 17...20]
+//[1...12, 13, 14, 15, 16...20]
 
 let totalPages = 20,
-    selectedPage = 1,
+    selectedPage = 15,
     pages = []
 
 for(let currentPage = 1; currentPage <= totalPages; currentPage++) {
-    pages.push(currentPage)
+    
+    const firstAndLastPage = currentPage == 1 || currentPage == totalPages
+    const pagesAfterSelectedPage = currentPage <= selectedPage + 2
+    const pagesBeforeSelectedPage = currentPage >= selectedPage - 2
+
+    if(firstAndLastPage || pagesBeforeSelectedPage && pagesAfterSelectedPage) {
+        pages.push(currentPage)
+    }
 }
 
 console.log(pages)
+
+
 
 
 
