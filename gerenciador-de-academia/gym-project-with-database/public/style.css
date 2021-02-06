@@ -337,8 +337,6 @@ td:last-child {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-
-    margin-bottom: 32px;
 }
 
 .table-container .header a {
@@ -372,3 +370,31 @@ td:last-child {
     background-color: var(--secondary-color);
 }
 /*FILTER*/
+
+/*PAGINATION*/
+.table-container {
+    display: grid;
+    grid-template: 64px 1fr 16px / 1fr;
+}
+
+.table-container .header {
+    align-self: start;
+}
+
+.table-container .pagination {
+    align-self: end;
+    justify-self: center;
+}
+
+.table-container .pagination a,
+.table-container .pagination span {
+    margin-right: 16px;
+
+    color: var(--primary-color);
+}
+
+.table-container .pagination a:hover {
+    filter: brightness(0.3);
+    
+    border-bottom: solid 1px var(--primary-color);
+}
