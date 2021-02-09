@@ -1,4 +1,5 @@
 const { date, bloodType } = require('../../lib/utils')
+const { all } = require('../models/Member')
 const Member = require('../models/Member')
 
 
@@ -8,20 +9,19 @@ module.exports = {
 
         page = page || 1
         limit = limit || 2
-        const offset = limit * (page - 1)
+        let offset = limit * (page - 1)
 
         const params = {
             filter,
-            page,
-            limit, 
+            limit,
             offset,
             callback(members) {
                 return res.render("members/index.html", { members, filter })
             }
         }
 
-        Member.pagination(params)
-        
+        Member.paginate(params)
+       
     },
     create(req, res) {
         Member.instructorsSelectOptions(function(options) {

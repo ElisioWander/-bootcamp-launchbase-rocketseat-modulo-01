@@ -60,7 +60,7 @@ module.exports = {
         FROM members
         WHERE members.name ILIKE '%${filter}%'
         OR members.email ILIKE '%${filter}%'`, function(err, results) {
-            if(err) throw `Database error! ${err}`
+            if(err) throw `Database error ${err}`
 
             callback(results.rows)
         })
@@ -113,19 +113,16 @@ module.exports = {
             callback(results.rows)
         })
     },
-    pagination(params) {
+    paginate(params) {
         const { filter, limit, offset, callback } = params
 
-        let query = `
-            SELECT *
-            FROM members
-        `
+        let query = `SELECT * FROM members`
 
         if(filter) {
             query = `${query}
-            WHERE members.name ILIKE '%${filter}%'
-            OR members.email ILIKE '%${filter}%'
-        `
+                WHERE members.name ILIKE '%${filter}%'
+                OR members.email ILIKE '%${filter}%'
+            `
         }
 
         query = `${query}
