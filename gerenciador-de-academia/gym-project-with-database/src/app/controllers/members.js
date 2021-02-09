@@ -4,9 +4,24 @@ const Member = require('../models/Member')
 
 module.exports = {
     index(req, res) {
-        Member.all(function(members) {
-            return res.render("members/index.html", { members })
-        })
+        let { filter, page, limit } = req.query
+
+        page = page || 1
+        limit = limit || 2
+        const offset = limit * (page - 1)
+
+        const params = {
+            filter,
+            page,
+            limit, 
+            offset,
+            callback(members) {
+                return res.render("members/index.html", { members, filter })
+            }
+        }
+
+        Member.pagination(params)
+        
     },
     create(req, res) {
         Member.instructorsSelectOptions(function(options) {
