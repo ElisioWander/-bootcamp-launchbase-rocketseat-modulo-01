@@ -1,5 +1,4 @@
 const { date, bloodType } = require('../../lib/utils')
-const { all } = require('../models/Member')
 const Member = require('../models/Member')
 
 
