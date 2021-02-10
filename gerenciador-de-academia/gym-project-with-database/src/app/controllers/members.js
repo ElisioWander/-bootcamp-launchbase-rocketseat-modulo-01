@@ -15,7 +15,16 @@ module.exports = {
             limit,
             offset,
             callback(members) {
-                return res.render("members/index.html", { members, filter })
+                if(!members[0]) {
+                    return res.render("members/not-found.html")
+                } else {
+                    const pagination = {
+                        total: Math.ceil(members[0].total / limit),
+                        page
+                    }
+    
+                    return res.render("members/index.html", { members, filter, pagination })
+                }
             }
         }
 
