@@ -93,5 +93,27 @@ module.exports = {
 
             callback(results.rows)
         })
+    },
+    paginate(params) {
+        let { filter, limit, offset, callback } = params
+
+        let query = `SELECT * FROM students`
+
+        if(filter) {
+            query = `${query}
+                WHERE students.name ILIKE '%${filter}%'
+                OR students.email ILIKE '%${filter}%'
+            `
+        }
+
+        query = `${query}
+            LIMIT $1 OFFSET $2
+        `
+
+        db.query(query, [limit, offset], function(err, results) {
+            if(err) throw `Database error! ${err}`
+
+            callback(results.rows)
+        })
     }
 }

@@ -3,13 +3,27 @@ const Student = require('../model/Student')
 
 module.exports = {
     index(req, res) {
-        Student.all(function(students) {
-            for(let student of students) {
-                student.school_level = grade(student.school_level)
-            }
+        let { filter, page, limit } = req.query
 
-            return res.render("students/index.html", { students })
-        })
+        page = page || 1
+        limit = limit || 2
+        let offset = limit * (page - 1)
+
+        const params = {
+            page,
+            filter,
+            limit,
+            offset,
+            callback(students) {
+                for(let student of students) {
+                    student.school_level = grade(student.school_level)
+                }
+
+                return res.render("students/index.html", { students, filter })
+            }
+        }
+
+        Student.paginate(params)
     },
     create(req, res) {
         Student.teachersSelectOptions(function(options) {

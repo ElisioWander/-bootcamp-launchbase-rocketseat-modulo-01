@@ -58,10 +58,10 @@ module.exports = {
                 break
         }
     },
-    grade(school) {
+    grade(school_level) {
         let grade
 
-        switch (school) {
+        switch (school_level) {
             case '5EF':
                 grade = '5º ano ensino fundamental'
 
