@@ -8,14 +8,42 @@ for(let item of menuItems) {
 }
 
 let totalPage = 20,
-    selectedPage,
+    selectedPage = 15,
+    oldPage,
     pages = []
 
     for(let currentPage = 1; currentPage <= totalPage; currentPage++) {
-        pages.push(currentPage)
+        const firstAndLastPage = currentPage == 1 || currentPage == totalPage
+        const pagesAfterSelectedPage = currentPage <= selectedPage + 2
+        const pagesBeforeSelectedPage = currentPage >= selectedPage - 2
+        
+
+        if(firstAndLastPage || pagesAfterSelectedPage & pagesBeforeSelectedPage) {
+            if(oldPage && currentPage - oldPage > 2) {
+                pages.push("...")
+            }
+
+            if(oldPage & currentPage - oldPage == 2) {
+                pages.push(oldPage + 1)
+            }
+            
+            pages.push(currentPage)
+
+            oldPage = currentPage
+        }
+
     }
 
-    console.log(pages)
+
+const pagination = document.querySelector(".pagination")
+
+let elements = ""
+
+for (let page of pages) {
+    elements = `<a href="">${page}</>`
+}
+
+pagination.innerHTML = elements
 
     
     
