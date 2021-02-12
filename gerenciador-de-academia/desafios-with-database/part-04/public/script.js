@@ -7,4 +7,15 @@ for(let item of menuItems) {
     }
 }
 
+let totalPage = 20,
+    selectedPage,
+    pages = []
 
+    for(let currentPage = 1; currentPage <= totalPage; currentPage++) {
+        pages.push(currentPage)
+    }
+
+    console.log(pages)
+
+    
+    
