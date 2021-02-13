@@ -15,6 +15,10 @@ module.exports = {
             limit,
             offset,
             callback(teachers) {
+                if(!teachers[0]) {
+                    return res.render("teachers/not-found.html")
+                }
+
                 const pagination = {
                     total: Math.ceil(teachers[0].total / limit),
                     page
