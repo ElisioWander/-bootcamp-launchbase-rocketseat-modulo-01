@@ -18,21 +18,26 @@ let totalPage = 20,
         const pagesBeforeSelectedPage = currentPage >= selectedPage - 2
         
 
-        if(firstAndLastPage || pagesAfterSelectedPage & pagesBeforeSelectedPage) {
+        if(firstAndLastPage || pagesAfterSelectedPage && pagesBeforeSelectedPage) {
             if(oldPage && currentPage - oldPage > 2) {
                 pages.push("...")
             }
 
-            if(oldPage & currentPage - oldPage == 2) {
+            if(oldPage && currentPage - oldPage == 2) {
                 pages.push(oldPage + 1)
             }
             
             pages.push(currentPage)
 
             oldPage = currentPage
+
+            
         }
+        
 
     }
+
+    console.log(pages)
 
 
 const pagination = document.querySelector(".pagination")
@@ -40,7 +45,7 @@ const pagination = document.querySelector(".pagination")
 let elements = ""
 
 for (let page of pages) {
-    elements = `<a href="">${page}</>`
+    elements += `<a href="">${page}</>`
 }
 
 pagination.innerHTML = elements

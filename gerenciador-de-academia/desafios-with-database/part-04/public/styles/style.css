@@ -325,3 +325,38 @@ thead tr th:nth-child(3) {
 
 /*FILTER*/
 
+/*PAGINATION*/
+.table-container {
+    display: grid;
+    grid-template: 64px 1fr 16px / 1fr;
+}
+
+.table-container .header {
+    margin: 0;
+
+    align-self: start;
+}
+
+.table-container .pagination {
+    align-self: end;
+
+    justify-self: center;
+}
+
+.table-container .pagination a,
+.table-container .pagination span {
+    margin: 0 16px 0 0;
+
+    padding: 0;
+
+    color: var(--primary-color);
+    background-color: #222;
+
+    transition: font-size 200ms;
+}
+
+.table-container .pagination a:hover {
+    font-size: 24px;
+}
+/*PAGINATION*/
+

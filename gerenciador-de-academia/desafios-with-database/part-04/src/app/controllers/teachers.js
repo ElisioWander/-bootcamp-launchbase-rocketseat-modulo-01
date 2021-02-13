@@ -24,7 +24,7 @@ module.exports = {
                     teacher.subjects_taught = teacher.subjects_taught.split(",")
                 }
 
-                return res.render("teachers/index.html", { teachers, filter, pagination })
+                return res.render("teachers/index.html", { teachers, filter })
             }
         }
 
