@@ -7,7 +7,7 @@
       "birth": 859939200000,
       "school": "doctorate",
       "classType": "presential",
-      "works": "Musculação, CrossFit, Jiu Jitsu, Muay Thai",
+      "works": "Matemática, física",
       "created_at": 1610159614635
     },
     {
@@ -17,7 +17,7 @@
       "birth": 859939200000,
       "school": "master",
       "classType": "presential",
-      "works": "Musculação, CrossFit",
+      "works": "Português, Literatura, Artes",
       "created_at": 1610159640578
     },
     {
@@ -27,7 +27,7 @@
       "birth": 649987200000,
       "school": "doctorate",
       "classType": "distance",
-      "works": "Musculação",
+      "works": "Inglês",
       "created_at": 1610418262887
     }
   ]
