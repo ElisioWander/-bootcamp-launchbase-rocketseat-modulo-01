@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block styles %}
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/page-not-found.css">
+{% endblock styles %}
+
+{% block title %}
+    <title>students</title>
+{% endblock title %}
+
+
+{% block content %}
+
+<div class="card table-container">
+    
+    <div class="header">
+        <a href="/students/create">Novo</a>
+
+        <form action="/students" method="GET">
+            <input 
+            type="text"
+            name="filter"
+            value="{{filter}}"
+            placeholder="Nome ou Email"
+            >
+
+            <button class="button" type="submit">Filtrar</button>
+        </form>
+    </div>
+    
+    <span>Nome ou Email não encontrado!</span>
+</div>
+
+{% endblock content %}

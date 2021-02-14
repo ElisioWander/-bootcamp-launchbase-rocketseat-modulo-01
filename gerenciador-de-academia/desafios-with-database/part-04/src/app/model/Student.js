@@ -97,16 +97,29 @@ module.exports = {
     paginate(params) {
         let { filter, limit, offset, callback } = params
 
-        let query = `SELECT * FROM students`
+        let query = "",
+            filterQuery = "",
+            totalQuery = `(
+                SELECT count(*) FROM students
+            ) AS total`
 
         if(filter) {
-            query = `${query}
+            filterQuery = `
                 WHERE students.name ILIKE '%${filter}%'
                 OR students.email ILIKE '%${filter}%'
             `
+
+            totalQuery = `(
+                SELECT count(*) FROM students
+                ${filterQuery}
+            ) AS total`
         }
 
-        query = `${query}
+        query = `
+            SELECT students.*, ${totalQuery}
+            FROM students
+            ${filterQuery}
+            ORDER BY name ASC
             LIMIT $1 OFFSET $2
         `
 

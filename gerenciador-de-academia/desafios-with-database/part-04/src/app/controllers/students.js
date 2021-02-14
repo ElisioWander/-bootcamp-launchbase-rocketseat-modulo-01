@@ -15,11 +15,20 @@ module.exports = {
             limit,
             offset,
             callback(students) {
+                if(!students[0]) {
+                    return res.render("students/not-found.html")
+                }
+
+                const pagination = {
+                    total: Math.ceil(students[0].total / limit),
+                    page
+                }
+
                 for(let student of students) {
                     student.school_level = grade(student.school_level)
                 }
 
-                return res.render("students/index.html", { students, filter })
+                return res.render("students/index.html", { students, filter, pagination })
             }
         }
 

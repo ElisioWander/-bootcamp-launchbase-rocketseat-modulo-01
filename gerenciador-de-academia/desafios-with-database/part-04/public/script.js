@@ -6,17 +6,21 @@ for(let item of menuItems) {
         item.classList.add('active')
     }
 }
-function paginate(selectedPage, totalPage) {
+function paginate(selectedPage, totalPages) {
     let oldPage,
         pages = []
 
-    for(let currentPage = 1; currentPage <= totalPage; currentPage++) {
-        const firstAndLastPage = currentPage == 1 || currentPage == totalPage
-        const pagesAfterSelectedPage = currentPage <= selectedPage + 2
-        const pagesBeforeSelectedPage = currentPage >= selectedPage - 2
+    for(let currentPage = 1; currentPage <= totalPages; currentPage++) {
+        const firstTwoPages = currentPage == 1 || currentPage == 2
+        const lastTwoPages = currentPage +1 == totalPages || currentPage == totalPages
+
+        const firstAndLastPages = firstTwoPages || lastTwoPages
+
+        const pagesAfterSelectedPage = currentPage <= selectedPage + 1
+        const pagesBeforeSelectedPage = currentPage >= selectedPage - 1
         
 
-        if(firstAndLastPage || pagesAfterSelectedPage && pagesBeforeSelectedPage) {
+        if(firstAndLastPages || pagesAfterSelectedPage && pagesBeforeSelectedPage) {
             if(oldPage && currentPage - oldPage > 2) {
                 pages.push("...")
             }
@@ -55,6 +59,7 @@ for (let page of pages) {
         }
     }    
 }
+
 
 pagination.innerHTML = elements
 

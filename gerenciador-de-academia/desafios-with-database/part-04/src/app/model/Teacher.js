@@ -131,6 +131,7 @@ module.exports = {
             LEFT JOIN students ON (students.teacher_id = teachers.id)
             ${filterQuery}
             GROUP BY teachers.id
+            ORDER BY name ASC
             LIMIT $1 OFFSET $2
         `
 
