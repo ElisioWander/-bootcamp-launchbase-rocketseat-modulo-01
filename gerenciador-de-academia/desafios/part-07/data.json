@@ -1,13 +1,13 @@
 {
   "students": [
     {
-      "id": 1,
+      "id": "1",
       "avatar": "https://images.unsplash.com/flagged/photo-1574110906643-8311b0ce29d3?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZmVzc29yfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-      "name": "Elisio Wander",
-      "email": "elisio741@hotmail.com",
-      "birth": 859939200000,
+      "name": "Matheus Silva",
+      "email": "mat741@hotmail.com",
+      "birth": "2004-04-02",
       "school": "3EM",
-      "hour": "8"
+      "hour": "24"
     },
     {
       "id": "2",
