@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+
+{% block content %}
+<div class="card table-container">
+
+  <div class="header">
+    <a class="button" href="/instructors/create">Novo</a>
+
+    <form action="/instructors" method="GET">
+      <input 
+        type="text" 
+        name="filter" 
+        value="{{ filter }}"
+        placeholder="Nome ou Atendimento"
+      >
+
+      <button type="submit">Filtrar</button>
+    </form>
+  </div>
+
+  <div id="not-found">
+    <span>Instrutor ou Atendimento não encontrado!</span>
+  </div>
+  
+
+</div>
+{% endblock content %}
