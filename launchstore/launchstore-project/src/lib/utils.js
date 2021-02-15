@@ -28,55 +28,5 @@ module.exports = {
             birthDay: `${day}/${month}`,
             format: `${day}/${month}/${year}`
         }
-        
-    },
-    bloodType(blood) {
-        let bloodType
-
-        switch (blood) {
-            case 'A1':
-                bloodType = "A+"
-                
-                return bloodType
-                break;
-            case 'A0':
-                bloodType = "A-"
-
-                return bloodType
-                break
-            case 'B1':
-                bloodType = "B+"
-
-                return bloodType
-                break
-            case 'B0':
-                bloodType = "B-"
-
-                return bloodType
-                break
-            case 'AB1':
-                bloodType = "AB+"
-
-                return bloodType
-                break
-            case 'AB0':
-                bloodType = "AB-"
-
-                return bloodType
-                break
-            case 'O1':
-                bloodType = "O+"
-
-                return bloodType
-                break
-            case 'O0':
-                bloodType = "O-"
-
-                return bloodType
-                break
-            default:
-                console.log("No option selected")
-                break;
-        }
     }
 }
