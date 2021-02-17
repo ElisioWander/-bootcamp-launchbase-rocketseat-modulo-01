@@ -4,24 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     {% block links %}
     {% endblock links %}
 
     {% block title %}
-    <title>Gym Project</title>
+    <title>Launchstore</title>
     {% endblock title %}
 </head>
 <body>
-    <header>
-        <div class="links">
-            <a href="/instructors">Instructors</a>
-            <a href="/members">Members</a>
-        </div>
-    </header>
+    {% include "parts/header.html" %}
 
     {% block content %}
     {% endblock content %}
 
-    <script src="/script.js"></script>
+    {% include "parts/footer.html"%}
+
+    
 </body>
 </html>
