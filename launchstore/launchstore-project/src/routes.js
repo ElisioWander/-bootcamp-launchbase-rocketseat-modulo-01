@@ -7,6 +7,9 @@ routes.get('/', (req, res) => {
     return res.render("layout.html")
 })
 routes.get('/products/create', ProductsController.create)
+routes.post('/products', ProductsController.post)
+
+
 routes.get('ads/create', function(req, res) {
     return res.redirect("/products/create")
 })
