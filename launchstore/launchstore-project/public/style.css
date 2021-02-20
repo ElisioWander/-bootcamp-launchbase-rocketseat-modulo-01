@@ -65,6 +65,22 @@ body {
     background-color: #c26903;
 }
 
+.button.edit {
+    background-color: #087ca0;
+}
+
+.button.edit:hover {
+    background-color: #02546d;
+}
+
+.button.delete {
+    background-color: lightgray;
+}
+
+.button.delete:hover {
+    background-color: rgb(233, 84, 84);
+}
+
 /*HEADER*/
 header, footer {
     width: 100%;
@@ -167,6 +183,10 @@ section form .header h3 {
     color: var(--primary-color);
 }
 
+form .fields {
+    margin-bottom: 64px;
+}
+
 form .item {
     margin-bottom: 16px;
 }
@@ -216,6 +236,30 @@ form .item textarea {
     min-height: 150px;
 }
 
-form .fields {
-    margin-bottom: 64px;
+form .item .radio {
+    display: flex;
 }
+
+form .item div span {
+    padding: 8px 16px;
+
+    margin-right: 8px;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+
+    border-radius: 16px;
+
+    text-transform: uppercase;
+
+    color: white;
+    background-color: var(--primary-color);
+}
+
+form .item div span input {
+    margin-right: 4px;
+}
+
