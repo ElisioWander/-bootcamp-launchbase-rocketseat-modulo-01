@@ -7,6 +7,7 @@ routes.get('/', (req, res) => {
     return res.render("layout.html")
 })
 routes.get('/products/create', ProductsController.create)
+routes.get('/products/:id/edit', ProductsController.edit)
 routes.post('/products', ProductsController.post)
 
 

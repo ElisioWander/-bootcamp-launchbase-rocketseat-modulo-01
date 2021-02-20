@@ -1,3 +1,5 @@
+const { formatPrice } = require('../../lib/utils')
+
 const Category = require('../models/Category')
 const Product = require('../models/Product')
 
@@ -28,5 +30,17 @@ module.exports = {
         const categories = results.rows
 
         return res.render("products/create.html", { productId, categories })
+    },
+    async edit(req, res) {
+        let results = await Product.find(req.params.id)
+        const product = results.rows[0]
+
+        product.old_price = formatPrice(product.old_price)
+        product.price = formatPrice(product.price)
+
+        results = await Category.all()
+        const categories = results.rows
+
+        return res.render("products/edit.html", { product, categories })
     }
 }

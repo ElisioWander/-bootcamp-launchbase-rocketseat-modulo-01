@@ -2,7 +2,8 @@
     <div>Categoria</div>
     <div>
         <select name="category">
-            <option value="" selected disabled>Selecione</option>
+            <option  value=""
+            {% if  value == "" %}selected{% endif %}>Selecione</option>
             {% for category in categories %}
                 <option value="{{category.id}}"
                         {% if product.category_id == category.id %}selected{% endif %}>
@@ -51,7 +52,7 @@
             type="number"
             name="quantity"
             placeholder="Estoque Disponível"
-            value="{{prouct.quantity}}"
+            value="{{product.quantity}}"
         >
     </div>
 </div>
