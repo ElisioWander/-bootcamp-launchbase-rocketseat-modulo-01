@@ -3,7 +3,7 @@
 
 :root {
     --primary-color: #fd951f;
-    --secondary-color: #1fd4fd ;
+    --secondary-color: #0081fa ;
 }
 
 * {
@@ -66,11 +66,11 @@ body {
 }
 
 .button.edit {
-    background-color: #087ca0;
+    background-color: var(--secondary-color);
 }
 
 .button.edit:hover {
-    background-color: #02546d;
+    background-color: #0060b9;
 }
 
 .button.delete {
@@ -261,5 +261,49 @@ form .item div span {
 
 form .item div span input {
     margin-right: 4px;
+}
+
+/*PHOTOS UPLOAD*/
+form .item #photos-upload {
+  width: 200px;
+
+  display: block;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+form .item #photos-upload p {
+    width: 100%;
+
+    padding: 8px 16px;
+
+    font-size: 14px;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    border-radius: 4px;
+    box-shadow: 2px 2px 2px -6px #333;
+
+    color: #fff;
+    background-color: var(--secondary-color);
+}
+
+form .item #photos-input {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+    overflow: hidden;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    cursor: pointer;
+
+    opacity: 0;
 }
 
