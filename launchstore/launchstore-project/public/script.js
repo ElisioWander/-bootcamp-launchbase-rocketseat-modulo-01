@@ -44,13 +44,17 @@ const Mask = {
 const PhotosUpload = {
     preview: document.querySelector('#photos-preview'),
     uploadLimit: 6,
+    files: [],
     handleFileInput(event) {
         const { files: fileList } = event.target
-       
+
         if(PhotosUpload.hasLimit(event)) return true
         
 
         Array.from(fileList).forEach(file => {
+
+            PhotosUpload.files.push(file)
+
             const reader = new FileReader()
 
             reader.onload = () => {
@@ -79,12 +83,17 @@ const PhotosUpload = {
 
         return false
     },
+    getAllFiles() {
+        const dataTransfer = new DataTransfer()
+
+        PhotosUpload.files.forEach(file => dataTransfer.items.add(file))
+    },
     getContainer(image) {
         const div = document.createElement('div')
 
         div.classList.add('photo')
 
-        div.onclick = () => alert('Remover foto')
+        div.onclick = PhotosUpload.removePhoto
 
         div.appendChild(image)
 
@@ -98,6 +107,13 @@ const PhotosUpload = {
         button.innerHTML = 'close'
 
         return button
+    },
+    removePhoto(event) {
+        const photoDiv = event.target.parentNode
+        const photosArray = Array.from(PhotosUpload.preview.children)
+        const index = photosArray.indexOf(photoDiv)
+
+        photoDiv.remove()
     }
 
 }
