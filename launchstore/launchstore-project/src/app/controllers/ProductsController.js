@@ -50,8 +50,12 @@ module.exports = {
         product.old_price = formatPrice(product.old_price)
         product.price = formatPrice(product.price)
 
+        //get category
         results = await Category.all()
         const categories = results.rows
+
+        //get iamges
+        results = await Product.files(product.id)
 
         return res.render("products/edit.html", { product, categories })
     },

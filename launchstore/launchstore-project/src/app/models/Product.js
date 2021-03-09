@@ -63,5 +63,9 @@ module.exports = {
     },
     find(id) {
         return db.query(`SELECT * FROM products WHERE id = $1`, [id])
+    },
+    files(id) {
+        return db.query(`
+            SELECT * FROM files WHERE product_id = $id`, [id])
     }
 }
