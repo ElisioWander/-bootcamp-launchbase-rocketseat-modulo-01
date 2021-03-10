@@ -148,6 +148,8 @@ const PhotosUpload = {
             if(removedFiles) {
                 removedFiles.value += `${photoDiv.id},`
             }
+
+            console.log(removedFiles)
         }
 
         photoDiv.remove()
