@@ -37,8 +37,6 @@ module.exports = {
         results = await Category.all()
         const categories = results.rows
 
-        console.log(req.body)
-
         return res.render("products/create.html", { productId, categories })
     },
     async edit(req, res) {
@@ -102,9 +100,6 @@ module.exports = {
         }
 
         let results = await Product.update(req.body)
-
-        console.log(req.body)
-        
 
         return res.redirect(`/products/${req.body.id}/edit`)
     },
