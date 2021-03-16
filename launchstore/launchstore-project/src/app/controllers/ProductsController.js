@@ -1,4 +1,4 @@
-const { formatPrice } = require('../../lib/utils')
+const { formatPrice, date} = require('../../lib/utils')
 
 const Category = require('../models/Category')
 const Product = require('../models/Product')
@@ -34,13 +34,25 @@ module.exports = {
         const filesPromise = req.files.map(file => File.create({ ...file, product_id: productId }))
         await Promise.all(filesPromise)
 
-        results = await Category.all()
-        const categories = results.rows
-
-        return res.render("products/create.html", { productId, categories })
+        return res.redirect(`/products/${productId}`)
     },
-    show(req, res) {
-        return res.render("products/show.html")
+    async show(req, res) {
+        let results = await Product.find(req.params.id)
+        const product = results.rows[0]
+
+        const { hour, minutes, day, month } = date(product.updated_at)
+
+        product.published = {
+            hour: `${hour}h${minutes}`,
+            day: `${day}/${month}`
+        }
+
+        console.log(product.published)
+
+        product.old_price = formatPrice(product.old_price)
+        product.price = formatPrice(product.price)
+        
+        return res.render("products/show.html", { product })
     },
     async edit(req, res) {
         let results = await Product.find(req.params.id)
@@ -104,7 +116,7 @@ module.exports = {
 
         let results = await Product.update(req.body)
 
-        return res.redirect(`/products/${req.body.id}/edit`)
+        return res.redirect(`/products/${req.body.id}`)
     },
     async delete(req, res) {
         let results = await Product.delete(req.body.id)

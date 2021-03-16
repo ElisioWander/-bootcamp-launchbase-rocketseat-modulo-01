@@ -19,9 +19,13 @@ module.exports = {
         const year = date.getUTCFullYear()
         const month = `0${date.getUTCMonth() + 1}`.slice(-2)
         const day = `0${date.getUTCDate()}`.slice(-2)
+        const hour = date.getHours()
+        const minutes = date.getMinutes()
 
         return {
             day,
+            hour,
+            minutes,
             month,
             year,
             iso: `${year}-${month}-${day}`,
@@ -30,9 +34,9 @@ module.exports = {
         }
     },
     formatPrice(price) {
-        return Intl.NumberFormat('pt-BR', {
+        return Intl.NumberFormat("pt-BR", {
             style: 'currency',
-            currency: 'BRL'
+            currency: 'BRL',
         }).format(price/100)
     }
 }
