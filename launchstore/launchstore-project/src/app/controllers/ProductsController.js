@@ -39,6 +39,9 @@ module.exports = {
 
         return res.render("products/create.html", { productId, categories })
     },
+    show(req, res) {
+        return res.render("products/show.html")
+    },
     async edit(req, res) {
         let results = await Product.find(req.params.id)
         const product = results.rows[0]
