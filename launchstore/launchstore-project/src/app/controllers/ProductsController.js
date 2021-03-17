@@ -40,6 +40,10 @@ module.exports = {
         let results = await Product.find(req.params.id)
         const product = results.rows[0]
 
+        if(!product) {
+            return res.send("Product not found!")
+        }
+
         const { hour, minutes, day, month } = date(product.updated_at)
 
         product.published = {
@@ -47,12 +51,16 @@ module.exports = {
             day: `${day}/${month}`
         }
 
-        console.log(product.published)
-
         product.old_price = formatPrice(product.old_price)
         product.price = formatPrice(product.price)
+
+        results = await Product.files(product.id)
+        const files = results.rows.map(file => ({
+            ...file,
+            src: `${req.protocol}://${req.headers.host}${file.path.replace("public", "")}`
+        }))
         
-        return res.render("products/show.html", { product })
+        return res.render("products/show.html", { product, files })
     },
     async edit(req, res) {
         let results = await Product.find(req.params.id)
