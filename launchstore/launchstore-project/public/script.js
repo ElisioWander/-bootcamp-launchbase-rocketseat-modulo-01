@@ -156,3 +156,18 @@ const PhotosUpload = {
     }
 
 }
+
+
+
+const ImageGallery = {
+    hinglight: document.querySelector('.gallery .hinglight > img'),
+    previews: document.querySelectorAll('.gallery-preview img'),
+    setImage(event) {
+        const { target } = event
+
+        ImageGallery.previews.forEach(preview => preview.classList.remove('active'))
+        target.classList.add('active')
+
+        ImageGallery.hinglight.src = target.src
+    }
+}
