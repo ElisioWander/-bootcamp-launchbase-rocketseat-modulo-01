@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<section class="shop container">
+    <h2>últimos produtos</h2>
+
+    <div class="items">
+        {% for product in products %}
+            <div class="product">
+                <div 
+                    class="image"
+                    style="background-image: url({{product.img if product.img else '//placehold.it/500x500'}});"
+                ></div>
+            </div>
+            <p>{{ product.price }}</p>
+            <h4>{{ product.name }}</h4>
+
+            <a href="/products/{{ products.id }}" class="button">Ver produto</a>
+        {% endfor %}
+    </div>
+</section>
+{% endblock content %}
