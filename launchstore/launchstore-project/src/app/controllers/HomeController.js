@@ -7,9 +7,7 @@ module.exports = {
         let results = await Product.all()
         const products = results.rows
 
-        if(!products) {
-            return res.send('Product not found!')
-        }
+        if(!products) return res.send("Product not found!")
 
         async function getImage(productId) {
             let results = await Product.files(productId)
@@ -19,7 +17,7 @@ module.exports = {
         }
 
         const productsPromise = products.map(async product => {
-            product.img = await getImage(productId)
+            product.img = await getImage(product.id)
             product.oldPrice = formatPrice(product.oldPrice)
             product.price = formatPrice(product.price)
 
